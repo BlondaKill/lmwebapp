@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, FlatList } from 'react-native'
 import Header from '../components/Header'
-import categories from '../utility/data/categories.json'
+import Categories from '../components/Categories'
+
 
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
   return (
     <View>
         <Header title="Home"/>
+        <Categories/>
         
         
     </View>
