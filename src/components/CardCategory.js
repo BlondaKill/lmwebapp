@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import ShadowPrimary from './wrapp/ShadowPrimary'
+
 
 const CardCategory = ({item}) => {
     return (
-        <View style={styles.container}>
-            <Text>{item}</Text>
-        </View>
+        <ShadowPrimary style={styles.container}>
+            <Text style={styles.text}>{item}</Text>
+        </ShadowPrimary>
     )
 }
 
@@ -14,7 +15,7 @@ export default CardCategory
 const styles = StyleSheet.create({
     container:{
         width: "80%",
-        backgroundColor: "#aeadad",
+        backgroundColor: "#eab4b4",
         marginHorizontal:"10%",
         marginVertical:10,
         padding:20,
