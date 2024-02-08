@@ -1,13 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Pressable, StyleSheet, Text, View } from 'react-native'
 import ShadowPrimary from './wrapp/ShadowPrimary'
 import colors from '../utility/globals/colors'
 
 
-const CardCategory = ({item}) => {
+const CardCategory = ({item, selectedCategoryState}) => {
     return (
-        <ShadowPrimary style={styles.container}>
-            <Text style={styles.text}>{item}</Text>
-        </ShadowPrimary>
+        <Pressable onPress={()=> selectedCategoryState(item)}>
+            <ShadowPrimary style={styles.container}>
+                <Text style={styles.text}>{item}</Text>
+            </ShadowPrimary>
+        </Pressable>
     )
 }
 

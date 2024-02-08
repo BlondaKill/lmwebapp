@@ -1,11 +1,21 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, Text, View } from 'react-native'
+import Header from '../components/Header'
 
 
 const ProductsByCategory = () => {
   return (
-    <View>
-      <Text>ProductsByCategory</Text>
-    </View>
+    <>
+    <Header title={categorySelected || "Productos"}/>
+    <Search handlerKeyword={handlerKeyword}/>
+    <FlatList
+      style={styles.container}
+      data={productsFiltered}
+      keyExtractor={item => item.id}
+      renderItem={({item}) => <ProductsByCategory item={item}/>} 
+    />
+    
+    
+    </>
   )
 }
 

@@ -3,12 +3,12 @@ import categories from '../utility/data/categories.json'
 import CardCategory from './CardCategory'
 
 
-const Categories = () => {
+const Categories = ({selectedCategoryState}) => {
   return (
     <FlatList
             data={categories}
             keyExtractor={item => item}
-            renderItem={({item}) => <CardCategory item={item}/>}
+            renderItem={({item}) => <CardCategory item={item} selectedCategoryState={selectedCategoryState}/>}
         
     />
   )
