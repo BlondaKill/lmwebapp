@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import ShadowPrimary from './wrapp/ShadowPrimary'
+import colors from '../utility/globals/colors'
 
 
 const CardCategory = ({item}) => {
@@ -15,7 +16,7 @@ export default CardCategory
 const styles = StyleSheet.create({
     container:{
         width: "80%",
-        backgroundColor: "#eab4b4",
+        backgroundColor: colors.primary,
         marginHorizontal:"10%",
         marginVertical:10,
         padding:20,

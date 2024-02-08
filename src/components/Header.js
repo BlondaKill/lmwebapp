@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native'
+import colors from '../utility/globals/colors'
 
 
 const Header = ({title="Ecommerce"}) => {
@@ -12,7 +13,7 @@ export default Header
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: "pink",
+        backgroundColor: colors.primary,
         height:80,
         width:"100%",
         justifyContent:"center",
