@@ -1,17 +1,18 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native'
 import Header from '../components/Header'
+import products from '../utility/data/products.json'
 
 
-const ProductsByCategory = () => {
+
+const ProductsByCategory = ({categorySelected}) => {
   return (
     <>
-    <Header title={categorySelected || "Productos"}/>
-    <Search handlerKeyword={handlerKeyword}/>
-    <FlatList
-      style={styles.container}
-      data={productsFiltered}
-      keyExtractor={item => item.id}
-      renderItem={({item}) => <ProductsByCategory item={item}/>} 
+      <Header title={categorySelected}/>
+      <FlatList
+
+        data={products}
+        keyExtractor={item => item.id}
+        renderItem={({item})=> <View><Text>{item.title}</Text></View> } 
     />
     
     
