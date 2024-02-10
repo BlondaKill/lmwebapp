@@ -1,7 +1,7 @@
 export const fontGroup = {
-    "Cookie-Regular": require("./assets/fonts/Cookie-Regular.ttf"),
-    "OleoScript-Bold": require("./assets/fonts/OleoScript-Bold.ttf"),
-    "OleoScript-Regular": require("./assets/fonts/OleoScript-Regular.ttf")
+    "Cookie-Regular": require("../../../assets/fonts/Cookie-Regular.ttf"),
+    "OleoScript-Bold": require("../../../assets/fonts/OleoScript-Bold.ttf"),
+    "OleoScript-Regular": require("../../../assets/fonts/OleoScript-Regular.ttf")
 
 }
 
@@ -12,4 +12,4 @@ const fonts = {
 }
 
 
-export default fonts
+export default fonts 
