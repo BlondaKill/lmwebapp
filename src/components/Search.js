@@ -1,14 +1,27 @@
-import { StyleSheet, Text, View } from 'react-native'
-
+import { StyleSheet, Text, TextInput, View, Pressable } from 'react-native'
+import {Feather} from "@expo/vector-icons"
 
 const Search = () => {
-  return (
-    <View>
-      <Text>Search</Text>
-    </View>
-  )
+    return (
+        <View>
+            <TextInput
+            placeholder='Buscar'
+            style={styles.input}
+        />
+        <Pressable>
+
+        </Pressable>
+        </View>
+    )
 }
 
 export default Search
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    input:{
+        paddingHorizontal:10,
+        paddingVertical:5,
+        borderWidth:2,
+        borderRadius:5
+    }
+})
