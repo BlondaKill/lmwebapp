@@ -3,17 +3,13 @@ import Home from './src/screens/Home'
 import { useEffect, useState } from 'react'
 import ProductsByCategory from './src/screens/ProductsByCategory'
 import {useFonts} from "expo-font"
+import { fontGroup } from './src/utility/globals/fonts'
 
 
 
 const App = () => {
 
-  const [fontsLoaded] = useFonts({
-    "Cookie-Regular": require("./assets/fonts/Cookie-Regular.ttf"),
-    "OleoScript-Bold": require("./assets/fonts/OleoScript-Bold.ttf"),
-    "OleoScript-Regular": require("./assets/fonts/OleoScript-Regular.ttf")
-
-  })
+  const [fontsLoaded] = useFonts(fontGroup)
   const [categorySelected, setCategorySelected] = useState("")
 
   if(!fontsLoaded) return null

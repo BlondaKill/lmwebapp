@@ -1,6 +1,7 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import ShadowPrimary from './wrapp/ShadowPrimary'
 import colors from '../utility/globals/colors'
+import fonts from '../utility/globals/fonts'
 
 
 const CardCategory = ({item, selectedCategoryState}) => {
@@ -29,6 +30,6 @@ const styles = StyleSheet.create({
     },
     text:{
         fontSize:40,
-        fontFamily: "Cookie-Regular",
+        fontFamily: fonts.CookieRegular,
     }    
 })
