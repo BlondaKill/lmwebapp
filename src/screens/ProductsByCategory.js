@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import products from '../utility/data/products.json'
 import { useEffect, useState } from 'react'
 import ProductByCategory from '../components/ProductByCategory'
+import Search from '../components/Search'
 
 
 
@@ -20,6 +21,7 @@ const ProductsByCategory = ({categorySelected}) => {
   return (
     <>
       <Header title={categorySelected}/>
+      <Search/>
       <FlatList
         data={productsFiltered}
         keyExtractor={item => item.id}

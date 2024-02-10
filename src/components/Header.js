@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import colors from '../utility/globals/colors'
+import fonts from '../utility/globals/fonts'
 
 
 const Header = ({title="Ecommerce"}) => {
@@ -20,7 +21,8 @@ const styles = StyleSheet.create({
         alignItems:"center"
     },
     text:{
-        fontSize:30,
+        fontSize:60,
+        fontFamily: fonts.CookieRegular
     }
 
 
