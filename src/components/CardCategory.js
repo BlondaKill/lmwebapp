@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
 
     },
     text:{
-        fontSize:16,
+        fontSize:40,
+        fontFamily: "Cookie-Regular",
     }    
 })

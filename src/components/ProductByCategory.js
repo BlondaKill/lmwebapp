@@ -5,13 +5,14 @@ import colors from '../utility/globals/colors'
 const ProductByCategory = ({item}) => {
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={{uri:item.thumbnail}}/>
+            <Image style={styles.image} source={{uri:item.image}} resizeMode='cover'/>
             <Text style={styles.text}>{item.id} {item.title}</Text>
         </View>
     )
 }
 
-//require("../../assets/crep.jpeg")
+// {uri:item.thumbnail}
+// require("../../assets/crep.jpeg")
 
 export default ProductByCategory
 
@@ -36,8 +37,6 @@ const styles = StyleSheet.create({
         width: 90,
         height: 90,
     }
-
-
 
 
 })
