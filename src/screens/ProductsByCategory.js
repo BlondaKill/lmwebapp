@@ -10,10 +10,19 @@ import Search from '../components/Search'
 const ProductsByCategory = ({categorySelected}) => {
 
   const [productsFiltered, setProductsFiltered] = useState([])
+  const [keyword, setKeyword] = useState("")
+  
+  const handlerKeyWord = (k) => {
+    setKeyword(k)
+  }
 
   useEffect(() => {
-    setProductsFiltered(products.filter(product => product.category === categorySelected))
-  }, [categorySelected])
+    if(categorySelected) setProductsFiltered(products.filter(product => product.category === categorySelected))
+    if(keyword) setProductsFiltered(productsFiltered.filter(product => {
+      const productTitleLower = product.title.toLowerCase() 
+      const keywordLower = keyword.toLowerCase()
+      return productTitleLower.includes(keywordLower)}))
+  }, [categorySelected, keyword])
 
 
 
@@ -21,11 +30,11 @@ const ProductsByCategory = ({categorySelected}) => {
   return (
     <>
       <Header title={categorySelected}/>
-      <Search/>
+      <Search handlerKeyWord={handlerKeyWord}/>
       <FlatList
         data={productsFiltered}
         keyExtractor={item => item.id}
-        renderItem={({item})=> <ProductByCategory item={item}/> } 
+        renderItem={({item})=> <ProductByCategory item={item}/>} 
     />
     
     
