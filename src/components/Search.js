@@ -6,6 +6,7 @@ import { useState } from 'react'
 
 const Search = ({handlerKeyword}) => {
     const [input, setInput] = useState("")
+    const [error, setError] = useState("")
 
     const handlerInput = (t) => setInput(t)
 
@@ -23,23 +24,27 @@ const Search = ({handlerKeyword}) => {
     const resetSearch = () => {
         handlerKeyword("")
         handlerInput("")
+        setError("")
     }
 
 
     return (
-        <View style={styles.container}>
-            <TextInput
-                placeholder='Buscar'
-                value= {input}
-                onChangeText={handlerInput}
-                style={styles.input}
-        />
-        <Pressable onPress={search}>
-            <Feather name='search' size={30} color="black"/>
-        </Pressable>
-        <Pressable onPress={resetSearch}>
-            <AntDesign name='closecircle' size={30} color="black"/>
-        </Pressable>
+        <View>
+            <View style={styles.container}>
+                <TextInput
+                    placeholder='Buscar'
+                    value= {input}
+                    onChangeText={handlerInput}
+                    style={styles.input}
+            />
+            <Pressable onPress={search}>
+                <Feather name='search' size={30} color="black"/>
+            </Pressable>
+            <Pressable onPress={resetSearch}>
+                <AntDesign name='closecircle' size={30} color="black"/>
+            </Pressable>
+            </View>
+            {error ? <Text style={styles.errorText}>{error}</Text> : null}
         </View>
     )
 }
@@ -60,5 +65,9 @@ const styles = StyleSheet.create({
         borderWidth:2,
         borderRadius:5,
         alignItems:"center"
+    },
+    errorText:{
+        color:"red",
+        paddingHorizontal:10
     }
 })
