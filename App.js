@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import Home from './src/screens/Home'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import ProductsByCategory from './src/screens/ProductsByCategory'
 import {useFonts} from "expo-font"
 import { fontGroup } from './src/utility/globals/fonts'

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, FlatList} from 'react-native'
+import { StyleSheet, FlatList} from 'react-native'
 import categories from '../utility/data/categories.json'
 import CardCategory from './CardCategory'
 
