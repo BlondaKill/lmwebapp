@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import Home from './src/screens/Home'
 import { useState } from 'react'
 import ProductsByCategory from './src/screens/ProductsByCategory'
@@ -20,17 +20,21 @@ const App = () => {
   
 
   return (
-    <>
+    <View style={styles.container}>
       {categorySelected ? 
                 <ProductsByCategory categorySelected={categorySelected}/>
                 :
                 <Home selectedCategoryState = {selectedCategoryState}/>
                 
       }
-    </>
+    </View>
   )
 }
 
 export default App
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+  }
+})

@@ -36,8 +36,11 @@ const styles = StyleSheet.create({
         fontFamily: fonts.OleoScriptBold
     },
     image:{
-        width: 90,
-        height: 90,
+        width: "30%",
+        height: "30%",
+        minWidth: 90,
+        minHeight: 90,
+        borderRadius: 5,
     }
 
 
