@@ -17,29 +17,28 @@ const ProductDetail = ({productId}) => {
 
 
   return (
-    <View>
-      
-      <View style={styles.container}>
+   
+    <View style={styles.container}>
     <Header title="Detalle del producto"/>
-        <View style={styles.content} >
-          <Image
+    <View style={styles.content} >
+        <Image
             style={styles.image}
-            source={{uri:product.image}}
+            source={{uri:product?.image}}
             resizeMode='cover'
-          />
+        />
           <View style={styles.containerText}>
             <Text style={styles.title}>{product.title}</Text>
             <Text>{product.description}</Text>
           </View>
-            <View style={styles.containerPrice}>
+          <View style={styles.containerPrice}>
               <Text style={styles.price}>$ {product.price}</Text>
-          <Pressable style={styles.buyNow}>
-            <Text style={styles.buyNowText}>Buy Now</Text>
-          </Pressable>
+              <Pressable style={styles.buyNow}>
+                <Text style={styles.buyNowText}>Buy Now</Text>
+              </Pressable>
           </View>
         </View>
       </View>
-    </View>
+     
   )
 }
 
