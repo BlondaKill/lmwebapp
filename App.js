@@ -1,4 +1,4 @@
-import { StyleSheet, View, StatusBar, SafeAreaView, Platform} from 'react-native'
+import { StyleSheet, View, StatusBar, SafeAreaView } from 'react-native'
 import Home from './src/screens/Home'
 import { useState } from 'react'
 import ProductsByCategory from './src/screens/ProductsByCategory'

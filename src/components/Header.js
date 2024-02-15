@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Platform } from 'react-native'
 import colors from '../utility/globals/colors'
 import fonts from '../utility/globals/fonts'
 
@@ -15,7 +15,7 @@ export default Header
 const styles = StyleSheet.create({
     container:{
         backgroundColor: colors.primary,
-        height:80,
+        height: Platform.OS === "ios" ? 40 : 80,
         width:"100%",
         justifyContent:"center",
         alignItems:"center"
