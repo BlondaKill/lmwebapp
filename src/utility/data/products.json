@@ -7,10 +7,7 @@
         "stock": 133,      
         "category": "ravioles",       
         "image": "https://i.ibb.co/CHzFZvH/rav.jpg"
-        
       },
-  
-      
       
 {
     "id": 1,
@@ -20,13 +17,7 @@
     "stock": 94,
     "brand": "Apple",
     "category": "ravioles",
-    "image": "https://i.ibb.co/CHzFZvH/rav.jpg",
-    "images": [
-      "https://i.ibb.co/CHzFZvH/rav.jpg",
-      "https://i.ibb.co/CHzFZvH/rav.jpg",
-      "https://i.ibb.co/CHzFZvH/rav.jpg",
-      "https://i.ibb.co/CHzFZvH/rav.jpg"
-    ]
+    "image": "https://i.ibb.co/CHzFZvH/rav.jpg"
     
   },
   {
@@ -265,7 +256,6 @@
     "title": "Freckle Treatment Cream- 15gm",
     "description": "Fair & Clear is Pakistan's only pure Freckle cream which helpsfade Freckles, Darkspots and pigments. Mercury level is 0%, so there are no side effects.",
     "price": 70,
-    
     "stock": 140,
     "brand": "Fair & Clear",
     "category": "tartas",
@@ -283,7 +273,6 @@
     "stock": 133,
     "brand": "Saaf & Khaas",
     "category": "tartas",
-    
     "image": 
       "https://i.dummyjson.com/data/products/21/3.jpg"
     
@@ -297,7 +286,6 @@
     "stock": 146,
     "brand": "Bake Parlor Big",
     "category": "empanadas",
-    
     "image": 
       "https://i.dummyjson.com/data/products/22/3.jpg"
     

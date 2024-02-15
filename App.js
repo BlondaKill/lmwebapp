@@ -21,7 +21,7 @@ const App = () => {
     setCategorySelected(category)
   }
 
-  const selectedProductId = () => {
+  const selectedProductId = (id) => {
     setProductId(id)
   }
 
@@ -31,7 +31,8 @@ const App = () => {
     <View style={styles.container}>
       {categorySelected ? 
                 productId ?
-                  <ProductDetail/>
+                  <ProductDetail 
+                    productId={productId}/>
                   :
                   <ProductsByCategory 
                   selectedProductId = {selectedProductId} 

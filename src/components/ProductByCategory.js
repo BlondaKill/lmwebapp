@@ -5,7 +5,7 @@ import fonts from '../utility/globals/fonts'
 
 const ProductByCategory = ({item, selectedProductId}) => {
     return (
-        <Pressable onPress={selectedProductId} style={styles.container}>
+        <Pressable onPress={() => selectedProductId (item.id)} style={styles.container}>
             <Image style={styles.image} source={{uri:item.image}} resizeMode='cover'/>
             <Text style={styles.text}>{item.id} {item.title}</Text>
         </Pressable>
