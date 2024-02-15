@@ -7,7 +7,7 @@ import Search from '../components/Search'
 
 
 
-const ProductsByCategory = ({categorySelected}) => {
+const ProductsByCategory = ({categorySelected, selectedProductId}) => {
 
   const [productsFiltered, setProductsFiltered] = useState([])
   const [keyword, setKeyword] = useState("")
@@ -34,7 +34,7 @@ const ProductsByCategory = ({categorySelected}) => {
       <FlatList
         data={productsFiltered}
         keyExtractor={item => item.id}
-        renderItem={({item})=> <ProductByCategory item={item}/>} 
+        renderItem={({item})=> <ProductByCategory selectedProductId = {selectedProductId} item={item}/>} 
     />
     
     
