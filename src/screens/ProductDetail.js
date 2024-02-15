@@ -5,7 +5,7 @@ import Header from '../components/Header'
 import colors from '../utility/globals/colors'
 
 
-const ProductDetail = ({productId}) => {
+const ProductDetail = ({productId, portrait}) => {
 
   const [product, setProduct] = useState({})
 
@@ -17,20 +17,19 @@ const ProductDetail = ({productId}) => {
 
 
   return (
-   
     <View style={styles.container}>
     <Header title="Detalle del producto"/>
-    <View style={styles.content} >
+    <View style={[styles.content, !portrait && {flexDirection: "row", gap:10, padding:20}]} >
         <Image
-            style={styles.image}
+            style={[styles.image, !portrait && {width:"25%", height:200}]}
             source={{uri:product?.image}}
             resizeMode='cover'
         />
-          <View style={styles.containerText}>
+          <View style={[styles.containerText, !portrait && {width: "40%"}]}>
             <Text style={styles.title}>{product.title}</Text>
             <Text>{product.description}</Text>
           </View>
-          <View style={styles.containerPrice}>
+          <View style={[styles.containerPrice, !portrait && {width: "30%", flexDirection:"column"}]}>
               <Text style={styles.price}>$ {product.price}</Text>
               <Pressable style={styles.buyNow}>
                 <Text style={styles.buyNowText}>Buy Now</Text>

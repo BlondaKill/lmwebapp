@@ -1,6 +1,6 @@
-import { StyleSheet, View, StatusBar, SafeAreaView } from 'react-native'
+import { StyleSheet, View, StatusBar, SafeAreaView, useWindowDimensions } from 'react-native'
 import Home from './src/screens/Home'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ProductsByCategory from './src/screens/ProductsByCategory'
 import {useFonts} from "expo-font"
 import { fontGroup } from './src/utility/globals/fonts'
@@ -13,8 +13,14 @@ const App = () => {
 
   const [fontsLoaded] = useFonts(fontGroup)
   const [categorySelected, setCategorySelected] = useState("")
-
+  const [portrait, setPortrait] = useState(true)
+  const {width, height} = useWindowDimensions()
   const [productId, setProductId] = useState(0)
+
+  useEffect(()=>{
+    if(width > height) setPortrait(false) 
+    else setPortrait(true)
+  }, [width, height])
 
   if(!fontsLoaded) return null
 
@@ -35,7 +41,9 @@ const App = () => {
         {categorySelected ? 
                   productId ?
                     <ProductDetail 
-                      productId={productId}/>
+                      productId={productId}
+                      portrait={portrait}
+                      />
                     :
                     <ProductsByCategory 
                     selectedProductId = {selectedProductId} 
