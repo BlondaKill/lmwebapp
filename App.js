@@ -1,10 +1,11 @@
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, StatusBar, SafeAreaView, Platform} from 'react-native'
 import Home from './src/screens/Home'
 import { useState } from 'react'
 import ProductsByCategory from './src/screens/ProductsByCategory'
 import {useFonts} from "expo-font"
 import { fontGroup } from './src/utility/globals/fonts'
 import ProductDetail from './src/screens/ProductDetail'
+import colors from './src/utility/globals/colors'
 
 
 
@@ -28,20 +29,23 @@ const App = () => {
   
 
   return (
-    <View style={styles.container}>
-      {categorySelected ? 
-                productId ?
-                  <ProductDetail 
-                    productId={productId}/>
+    <>
+    <StatusBar backgroundColor={colors.grey} barStyle={'dark-content'}/>
+      <SafeAreaView style={styles.container}>
+        {categorySelected ? 
+                  productId ?
+                    <ProductDetail 
+                      productId={productId}/>
+                    :
+                    <ProductsByCategory 
+                    selectedProductId = {selectedProductId} 
+                    categorySelected={categorySelected}/>
                   :
-                  <ProductsByCategory 
-                  selectedProductId = {selectedProductId} 
-                  categorySelected={categorySelected}/>
-                :
-                <Home selectedCategoryState = {selectedCategoryState}/>
-                
-      }
-    </View>
+                  <Home selectedCategoryState = {selectedCategoryState}/>
+                  
+        }
+    </SafeAreaView>
+    </>
   )
 }
 
