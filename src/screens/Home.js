@@ -4,12 +4,12 @@ import Categories from '../components/Categories'
 
 
 
-const Home = ({selectedCategoryState}) => {
+const Home = (navigation) => {
     
   return (
     <>
         <Header title="Home"/>
-        <Categories selectedCategoryState={selectedCategoryState}/>
+        <Categories navigation={navigation}/>
         
         
     </>

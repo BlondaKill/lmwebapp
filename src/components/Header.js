@@ -3,7 +3,7 @@ import colors from '../utility/globals/colors'
 import fonts from '../utility/globals/fonts'
 
 
-const Header = ({title="Ecommerce"}) => {
+const Header = ({title="Rochino"}) => {
     return  <View style={styles.container}>
                 <Text style={styles.text}>{title}</Text>
             </View>

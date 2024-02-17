@@ -1,7 +1,7 @@
-import { StyleSheet, Text, TextInput, View, Pressable, Keyboard} from 'react-native'
+import { StyleSheet, Text, TextInput, View, Pressable, Keyboard } from 'react-native'
 import colors from '../utility/globals/colors'
-import {Feather} from "@expo/vector-icons"
-import {AntDesign} from "@expo/vector-icons"
+import { Feather } from "@expo/vector-icons"
+import { AntDesign } from "@expo/vector-icons"
 import { useState } from 'react'
 
 const Search = ({handlerKeyword}) => {
@@ -30,6 +30,7 @@ const Search = ({handlerKeyword}) => {
 
     return (
         <View>
+            
             <View style={styles.container}>
                 <TextInput
                     placeholder='Buscar'
