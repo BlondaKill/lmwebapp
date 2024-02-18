@@ -7,8 +7,9 @@ import Search from '../components/Search'
 
 
 
-const ProductsByCategory = ({categorySelected}) => {
-
+const ProductsByCategory = ({navigation, route}) => {
+   
+  const {categorySelected} = route.params
   const [productsFiltered, setProductsFiltered] = useState([])
   const [keyword, setKeyword] = useState("")
   
@@ -34,7 +35,7 @@ const ProductsByCategory = ({categorySelected}) => {
       <FlatList
         data={productsFiltered}
         keyExtractor={item => item.id}
-        renderItem={({item})=> <ProductByCategory  item={item}/>} 
+        renderItem={({item})=> <ProductByCategory navigation={navigation} item={item}/>} 
     />
     
     

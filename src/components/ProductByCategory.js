@@ -3,9 +3,9 @@ import colors from '../utility/globals/colors'
 import fonts from '../utility/globals/fonts'
 
 
-const ProductByCategory = ({item}) => {
+const ProductByCategory = ({item, navigation}) => {
     return (
-        <Pressable onPress={() => console.log(item.id)} style={styles.container}>
+        <Pressable onPress={() => navigation.navigate("ProductDetail", {productId:item.id})} style={styles.container}>
             <Image style={styles.image} source={{uri:item.image}} resizeMode='cover'/>
             <Text style={styles.text}>{item.id} {item.title}</Text>
         </Pressable>

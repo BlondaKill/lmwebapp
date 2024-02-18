@@ -4,7 +4,7 @@ import Categories from '../components/Categories'
 
 
 
-const Home = (navigation) => {
+const Home = ({navigation}) => {
     
   return (
     <>

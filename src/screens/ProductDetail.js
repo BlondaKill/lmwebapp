@@ -5,8 +5,8 @@ import Header from '../components/Header'
 import colors from '../utility/globals/colors'
 
 
-const ProductDetail = ({productId}) => {
-
+const ProductDetail = ({route}) => {
+  const {productId} = route.params
   const [product, setProduct] = useState({})
 
   useEffect(() => {

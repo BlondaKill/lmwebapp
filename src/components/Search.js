@@ -7,7 +7,6 @@ import { useState } from 'react'
 const Search = ({handlerKeyword}) => {
     const [input, setInput] = useState("")
     const [error, setError] = useState("")
-
     const handlerInput = (t) => setInput(t)
 
     const search = () => {
@@ -29,8 +28,7 @@ const Search = ({handlerKeyword}) => {
 
 
     return (
-        <View>
-            
+        <View>     
             <View style={styles.container}>
                 <TextInput
                     placeholder='Buscar'
