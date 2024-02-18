@@ -25,11 +25,13 @@ const App = () => {
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName='Home'
-          screenOptions={({route})=> {
+          screenOptions={({route, navigation})=> {
             return{
               header: () =>{
-                return <Header title= {route.name === "Home" ? "Rochino" : 
-                                       route.name === "ProductsByCategory" ? route.params.categorySelected : "Detalle"
+                return <Header 
+                              navigation={navigation}
+                              title= {route.name === "Home" ? "Rochino" : 
+                                        route.name === "ProductsByCategory" ? route.params.categorySelected : "Detalle"
               }/>
               }
             }

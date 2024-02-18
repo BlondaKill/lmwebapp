@@ -6,9 +6,10 @@ import {Ionicons} from "@expo/vector-icons"
 
 const Header = ({title="Rochino", navigation}) => {
     return  <View style={styles.container}>
+                {navigation.canGoBack() && 
                 <Pressable style={styles.goBack} onPress={()=> navigation.goBack()}>
                     <Ionicons name='arrow-back-circle-outline' size={30} color="black"/>
-                </Pressable>
+                </Pressable>}
                 <Text style={styles.text}>{title}</Text>
             </View>
 
