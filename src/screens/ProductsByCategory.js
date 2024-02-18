@@ -30,7 +30,6 @@ const ProductsByCategory = ({navigation, route}) => {
 
   return (
     <>
-      <Header title={categorySelected}/>
       <Search handlerKeyWord={handlerKeyWord}/>
       <FlatList
         data={productsFiltered}

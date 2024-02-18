@@ -7,6 +7,7 @@ import ProductsByCategory from './src/screens/ProductsByCategory'
 import ProductDetail from './src/screens/ProductDetail'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Header from './src/components/Header'
 
 
 const Stack = createNativeStackNavigator();
@@ -22,11 +23,22 @@ const App = () => {
     <>
       <StatusBar backgroundColor={colors.grey} barStyle={'dark-content'}/>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+          initialRouteName='Home'
+          screenOptions={({route})=> {
+            return{
+              header: () =>{
+                return <Header title= {route.name === "Home" ? "Rochino" : 
+                                       route.name === "ProductsByCategory" ? route.params.categorySelected : "Detalle"
+              }/>
+              }
+            }
+          }
+        }
+        >
           <Stack.Screen name="Home" component={Home}/>
           <Stack.Screen name="ProductsByCategory" component={ProductsByCategory}/>
-          <Stack.Screen name="ProductDetail" component={ProductDetail}/>
-          
+          <Stack.Screen name="ProductDetail" component={ProductDetail}/>         
         </Stack.Navigator> 
       </NavigationContainer>
     </>

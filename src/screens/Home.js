@@ -8,7 +8,6 @@ const Home = ({navigation}) => {
     
   return (
     <>
-        <Header title="Home"/>
         <Categories navigation={navigation}/>
         
         
