@@ -1,10 +1,14 @@
-import { StyleSheet, Text, View, Platform } from 'react-native'
+import { StyleSheet, Text, View, Platform, Pressable } from 'react-native'
 import colors from '../utility/globals/colors'
 import fonts from '../utility/globals/fonts'
+import {Ionicons} from "@expo/vector-icons"
 
 
-const Header = ({title="Rochino"}) => {
+const Header = ({title="Rochino", navigation}) => {
     return  <View style={styles.container}>
+                <Pressable style={styles.goBack} onPress={()=> navigation.goBack()}>
+                    <Ionicons name='arrow-back-circle-outline' size={30} color="black"/>
+                </Pressable>
                 <Text style={styles.text}>{title}</Text>
             </View>
 
@@ -18,11 +22,17 @@ const styles = StyleSheet.create({
         height: Platform.OS === "ios" ? 40 : 80,
         width:"100%",
         justifyContent:"center",
-        alignItems:"center"
+        alignItems:"center",
+        position: "relative"
     },
     text:{
         fontSize:60,
         fontFamily: fonts.CookieRegular
+    },
+    goBack: {
+        position: "absolute",
+        left: 10,
+        bottom: 25
     }
 
 

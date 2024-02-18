@@ -18,7 +18,7 @@ const ProductDetail = ({route}) => {
 
   return (
     <View style={styles.container}>
-    <Header title="Detalle del producto"/>
+    <Header title="del producto"/>
     <View style={styles.content} >
         <Image
             style={styles.image}
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   content:{
-    width: "100%",
+    width: "90%",
   },
   image:{
     width: "100%",
