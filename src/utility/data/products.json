@@ -1,8 +1,8 @@
 [
     {
         "id": 0,
-        "title": "Crystal chandelier maria theresa for 12 light",
-        "description": "Crystal chandelier maria theresa for 12 light",
+        "title": "Ravioles de Ricota",
+        "description": "Ravioles de Ricota y Nuez",
         "price": 47,
         "stock": 133,      
         "category": "ravioles",       
@@ -11,19 +11,19 @@
       
 {
     "id": 1,
-    "title": "ravioles",
-    "description": "An apple mobile which is nothing like apple",
+    "title": "Ravioles de Verdura",
+    "description": "Ravioles de Verdura con una suave salsa",
     "price": 549,
     "stock": 94,
-    "brand": "Apple",
+    "brand": "Rochino",
     "category": "ravioles",
-    "image": "https://i.ibb.co/CHzFZvH/rav.jpg"
+    "image": "https://i.ibb.co/zXFXW2n/ravcrud.jpg"
     
   },
   {
     "id": 2,
-    "title": "iPhone X",
-    "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+    "title": "Ravioles de Calabaza",
+    "description": "Ravioles de Calabaza y crema",
     "price": 899,
     "stock": 34,
     "brand": "Apple",
@@ -58,8 +58,8 @@
   },
   {
     "id": 5,
-    "title": "Huawei P30",
-    "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+    "title": "Sorrentinos de Jamon y Queso",
+    "description": "Sorrentinos de una suave muzzarella italiana y jamon cocido",
     "price": 499,
     "stock": 32,
     "brand": "Huawei",
@@ -71,8 +71,6 @@
     "title": "MacBook Pro",
     "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
     "price": 1749,
-    
-    
     "stock": 83,
     "brand": "Apple",
     "category": "sorrentinos",
@@ -83,11 +81,9 @@
     "title": "Samsung Galaxy Book",
     "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
     "price": 1499,
-    
     "stock": 50,
     "brand": "Samsung",
     "category": "sorrentinos",
-    
     "image": "https://i.ibb.co/bdj4cxH/pizza.jpg"
   },
   {
@@ -95,11 +91,9 @@
     "title": "Microsoft Surface Laptop 4",
     "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
     "price": 1499,
-    
     "stock": 68,
     "brand": "Microsoft Surface",
     "category": "sorrentinos",
-    
     "image": "https://i.ibb.co/93SdPNY/tart.jpg"
   },
   {
@@ -118,25 +112,19 @@
     "title": "HP Pavilion 15-DK1056WM",
     "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
     "price": 1099,
-    
     "stock": 89,
     "brand": "HP Pavilion",
-    "category": "sorrentinos",
-    
-    "image": 
-      "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
-    
+    "category": "lasagna",
+    "image": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
   },
   {
     "id": 11,
     "title": "perfume Oil",
     "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
     "price": 13,
-    
     "stock": 65,
     "brand": "Impression of Acqua Di Gio",
     "category": "lasagna",
-    
     "image": 
       "https://i.dummyjson.com/data/products/11/thumbnail.jpg"
     
@@ -146,11 +134,9 @@
     "title": "Brown Perfume",
     "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
     "price": 40,
-    
     "stock": 52,
     "brand": "Royal_Mirage",
     "category": "lasagna",
-    
     "image": 
       "https://i.dummyjson.com/data/products/12/thumbnail.jpg"
     
@@ -177,7 +163,7 @@
    
     "stock": 114,
     "brand": "Al Munakh",
-    "category": "lasagna",
+    "category": "fideos",
    
     "image": 
       "https://i.dummyjson.com/data/products/14/thumbnail.jpg"
@@ -191,7 +177,7 @@
     
     "stock": 105,
     "brand": "Lord - Al-Rehab",
-    "category": "lasagna",
+    "category": "fideos",
     
     "image": 
       "https://i.dummyjson.com/data/products/15/thumbnail.jpg"
@@ -245,7 +231,7 @@
     
     "stock": 54,
     "brand": "ROREC White Rice",
-    "category": "tartas",
+    "category": "crepitos",
     
     "images":
       "https://i.dummyjson.com/data/products/19/thumbnail.jpg"
@@ -285,7 +271,7 @@
     
     "stock": 146,
     "brand": "Bake Parlor Big",
-    "category": "empanadas",
+    "category": "tartas",
     "image": 
       "https://i.dummyjson.com/data/products/22/3.jpg"
     
@@ -311,7 +297,117 @@
     "price": 46,
     "stock": 113,
     "brand": "fauji",
-    "category": "groceries",
+    "category": "empanadas",
+    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
+  
+  },
+  {
+    "id": 25,
+    "title": "cereals muesli fruit nuts",
+    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "price": 46,
+    "stock": 113,
+    "brand": "fauji",
+    "category": "empanadas",
+    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
+  
+  },
+  {
+    "id": 26,
+    "title": "cereals muesli fruit nuts",
+    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "price": 46,
+    "stock": 113,
+    "brand": "fauji",
+    "category": "empanadas",
+    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
+  
+  },
+  {
+    "id": 27,
+    "title": "cereals muesli fruit nuts",
+    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "price": 46,
+    "stock": 113,
+    "brand": "fauji",
+    "category": "pizzas",
+    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
+  
+  },
+  {
+    "id": 28,
+    "title": "cereals muesli fruit nuts",
+    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "price": 46,
+    "stock": 113,
+    "brand": "fauji",
+    "category": "empanadas",
+    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
+  
+  },
+  {
+    "id": 29,
+    "title": "cereals muesli fruit nuts",
+    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "price": 46,
+    "stock": 113,
+    "brand": "fauji",
+    "category": "empanadas",
+    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
+  
+  },
+  {
+    "id": 30,
+    "title": "cereals muesli fruit nuts",
+    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "price": 46,
+    "stock": 113,
+    "brand": "fauji",
+    "category": "empanadas",
+    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
+  
+  },
+  {
+    "id": 31,
+    "title": "cereals muesli fruit nuts",
+    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "price": 46,
+    "stock": 113,
+    "brand": "fauji",
+    "category": "empanadas",
+    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
+  
+  },
+  {
+    "id": 32,
+    "title": "cereals muesli fruit nuts",
+    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "price": 46,
+    "stock": 113,
+    "brand": "fauji",
+    "category": "empanadas",
+    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
+  
+  },
+  {
+    "id": 33,
+    "title": "cereals muesli fruit nuts",
+    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "price": 46,
+    "stock": 113,
+    "brand": "fauji",
+    "category": "empanadas",
+    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
+  
+  },
+  {
+    "id": 34,
+    "title": "cereals muesli fruit nuts",
+    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "price": 46,
+    "stock": 113,
+    "brand": "fauji",
+    "category": "empanadas",
     "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
   
   }
