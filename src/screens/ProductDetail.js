@@ -37,7 +37,7 @@ const ProductDetail = ({route}) => {
           </View>
         </View>
       </View>
-     
+  
   )
 }
 
