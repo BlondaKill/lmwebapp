@@ -4,7 +4,7 @@ import { Feather } from "@expo/vector-icons"
 import { AntDesign } from "@expo/vector-icons"
 import { useState } from 'react'
 
-const Search = ({handlerKeyword}) => {
+const Search = ({handlerKeyWord}) => {
     const [input, setInput] = useState("")
     const [error, setError] = useState("")
     const handlerInput = (t) => setInput(t)
@@ -16,12 +16,12 @@ const Search = ({handlerKeyword}) => {
             return
         }
         setError("")
-        handlerKeyword(input)
+        handlerKeyWord(input)
         Keyboard.dismiss()
     }
 
     const resetSearch = () => {
-        handlerKeyword("")
+        handlerKeyWord("")
         handlerInput("")
         setError("")
     }
