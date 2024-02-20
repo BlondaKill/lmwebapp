@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
 import products from '../utility/data/products.json'
 import { useEffect, useState } from 'react'
-import Header from '../components/Header'
 import colors from '../utility/globals/colors'
 
 
@@ -18,7 +17,6 @@ const ProductDetail = ({route}) => {
 
   return (
     <View style={styles.container}>
-    <Header title="del producto"/>
     <View style={styles.content} >
         <Image
             style={styles.image}
