@@ -15,7 +15,6 @@ const App = () => {
   if(!fontsLoaded) return null
 
 
-
   return (
     <>
       <StatusBar backgroundColor={colors.grey} barStyle={'dark-content'}/>
