@@ -1,14 +1,23 @@
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import Cart from '../screens/Cart'
+import Header from '../components/Header'
 
-export class CartStack extends Component {
-  render() {
-    return (
-      <View>
-        <Text>CartStack</Text>
-      </View>
-    )
-  }
+
+const Stack = createNativeStackNavigator()
+const CartStack = () => {
+  return (
+    <Stack.Navigator>
+        initialRouteName='Cart'
+        screenOptions={({navigation})=>{
+            return {
+                header: () =>{
+                    return <Header title='Carrito' navigation={navigation}/>
+                }
+            }
+        }}
+        <Stack.Screen name='Cart' component={Cart}/>ßß
+    </Stack.Navigator>
+  )
 }
 
 export default CartStack
