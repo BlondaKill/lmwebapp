@@ -26,7 +26,7 @@ const MainNavigator = () => {
                 name='ShopStack' 
                 component={ShopStack}
                 options= {{
-                    tabBarIcon: () => <TabBarIcon title= "Productos"/>
+                    tabBarIcon: () => <TabBarIcon title= "Productos" nameIcon="home"/>
                 }}
                 />
 
@@ -34,7 +34,7 @@ const MainNavigator = () => {
                 name='CartStack' 
                 component={CartStack}
                 options= {{
-                    tabBarIcon: () => <TabBarIcon title= "Carrito"/>
+                    tabBarIcon: () => <TabBarIcon title= "Carrito" nameIcon="shopping-cart"/>
                 }}
                 />
 
@@ -43,10 +43,10 @@ const MainNavigator = () => {
                 name='OrdersStack' 
                 component={OrdersStack}
                 options= {{
-                    tabBarIcon: () => <TabBarIcon title= "Pedido"/>
+                    tabBarIcon: () => <TabBarIcon title= "Pedido" nameIcon="list"/>
                 }}
                 />
-                
+
             </Tab.Navigator>
         </NavigationContainer>
         

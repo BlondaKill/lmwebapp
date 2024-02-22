@@ -1,9 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Entypo} from '@expo/vector-icons'
 
-const TabBarIcon = ({title}) => {
+
+
+const TabBarIcon = ({title, nameIcon}) => {
   return (
-    <View>
+    <View style={styles.container}>
+      <Entypo name={nameIcon} size={25} color="black"/>  
+
       <Text>{title}</Text>
     </View>
   )
@@ -11,4 +15,16 @@ const TabBarIcon = ({title}) => {
 
 export default TabBarIcon
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container: {
+        alignItems: 'center'
+    },
+    text: {
+        color: "black",
+        textAlign: "center",
+        fontSize:15,
+        fontWeight: "bold"
+    }
+
+
+})
