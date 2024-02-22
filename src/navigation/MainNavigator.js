@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import ShopStack from './ShopStack';
@@ -6,6 +6,7 @@ import CartStack from './CartStack';
 import OrdersStack from './OrdersStack';
 import colors from '../utility/globals/colors';
 import Orders from '../screens/Orders';
+import TabBarIcon from '../components/TabBarIcon';
 
 const Tab = createBottomTabNavigator();
 
@@ -18,11 +19,34 @@ const MainNavigator = () => {
                     headerShown: false,
                     tabBarShowLabel: false,
                     tabBarStyle: styles.tabBar,
+                    
                 }}
             >
-                <Tab.Screen name='ShopStack' component={ShopStack}/>
-                <Tab.Screen name='CartStack' component={CartStack}/>
-                <Tab.Screen name='OrdersStack' component={OrdersStack}/>
+                <Tab.Screen 
+                name='ShopStack' 
+                component={ShopStack}
+                options= {{
+                    tabBarIcon: () => <TabBarIcon title= "Productos"/>
+                }}
+                />
+
+                <Tab.Screen 
+                name='CartStack' 
+                component={CartStack}
+                options= {{
+                    tabBarIcon: () => <TabBarIcon title= "Carrito"/>
+                }}
+                />
+
+
+                <Tab.Screen 
+                name='OrdersStack' 
+                component={OrdersStack}
+                options= {{
+                    tabBarIcon: () => <TabBarIcon title= "Pedido"/>
+                }}
+                />
+                
             </Tab.Navigator>
         </NavigationContainer>
         
