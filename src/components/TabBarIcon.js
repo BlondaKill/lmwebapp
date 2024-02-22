@@ -3,14 +3,14 @@ import { Entypo} from '@expo/vector-icons'
 
 
 
-const TabBarIcon = ({title, nameIcon}) => {
-  return (
-    <View style={styles.container}>
-      <Entypo name={nameIcon} size={25} color="black"/>  
+const TabBarIcon = ({title, nameIcon, focused}) => {
+    return (
+        <View style={styles.container}>
+        <Entypo name={nameIcon} size={25} color={focused ? "#f78d8d":"rgba(255,255,255,0.6)"}/>  
 
-      <Text>{title}</Text>
-    </View>
-  )
+        <Text>{title}</Text>
+        </View>
+    )
 }
 
 export default TabBarIcon
