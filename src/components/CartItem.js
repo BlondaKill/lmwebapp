@@ -1,7 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
+import colors from '../utility/globals/colors'
+import fonts from '../utility/globals/fonts'
+import { Entypo } from '@expo/vector-icons'
 
 
-const CartItem = () => {
+
+const CartItem = ({item}) => {
     return (
         <View style={styles.card}>
                 <View style={styles.textContainer}>
@@ -18,7 +22,7 @@ export default CartItem
 
 const styles = StyleSheet.create({
     card:{
-        backgroundColor:colors.green3,
+        backgroundColor:colors.primary,
         padding:20,
         margin:10,
         borderWidth:2,
@@ -32,14 +36,14 @@ const styles = StyleSheet.create({
         width:"70%"
     },
     text:{
-        color:colors.lightGray,
+        color:colors.black,
         fontSize:19,
-        fontFamily:fonts.JosefinSansBold
+        fontFamily:fonts.RobotoBold
     },
     text2:{
-        color:colors.lightGray,
+        color:colors.black,
         fontSize:14,
-        fontFamily:fonts.JosefinSansBold
+        fontFamily:fonts.RobotoBold
     }
 
 

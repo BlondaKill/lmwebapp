@@ -26,7 +26,7 @@
     "description": "Ravioles de Calabaza y crema",
     "price": 899,
     "stock": 34,
-    "brand": "Apple",
+    "brand": "Rochino",
     "category": "ravioles",
     "image": "https://i.ibb.co/CHzFZvH/rav.jpg"
   },
@@ -35,7 +35,6 @@
     "title": "Samsung Universe 9",
     "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
     "price": 1249,
-    
     "stock": 36,
     "brand": "Samsung",
     "category": "ravioles",
@@ -188,7 +187,6 @@
     "title": "Hyaluronic Acid Serum",
     "description": "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
     "price": 19,
-    
     "stock": 110,
     "brand": "L'Oreal Paris",
     "category": "fideos",
