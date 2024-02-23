@@ -1,4 +1,5 @@
-import { StyleSheet, Text, View, FlatList } from 'react-native'
+import { StyleSheet, Text, View, FlatList, Pressable } from 'react-native'
+import CartItem from '../components/CartItem'
 import cart from '../utility/data/cart.json'
 import fonts from '../utility/globals/fonts'
 
