@@ -1,14 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
 import { Entypo} from '@expo/vector-icons'
+import colors from '../utility/globals/colors'
 
 
 
 const TabBarIcon = ({title, nameIcon, focused}) => {
     return (
         <View style={styles.container}>
-        <Entypo name={nameIcon} size={25} color={focused ? "#f78d8d":"rgba(255,255,255,0.6)"}/>  
+        <Entypo name={nameIcon} size={25} color={focused ? "#f78d8d": colors.white}/>  
 
-        <Text>{title}</Text>
+        <Text style={[styles.text, focused && styles.textFocused]}>{title}</Text>
         </View>
     )
 }
@@ -20,10 +21,13 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     text: {
-        color: "black",
+        color: colors.black,
         textAlign: "center",
         fontSize:15,
         fontWeight: "bold"
+    },
+    textFocused:{
+        color: colors.primary,
     }
 
 
