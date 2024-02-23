@@ -1,0 +1,28 @@
+{
+    "total": 1333,
+    "items": [
+        {
+            "id": 0,
+            "quantity": 5,
+            "title": "Ravioles de Ricota",
+            "description": "Ravioles de Ricota y Nuez",
+            "price": 47,
+            "stock": 133,      
+            "category": "ravioles",       
+            "image": "https://i.ibb.co/CHzFZvH/rav.jpg"
+          },
+          
+    {
+        "id": 1,
+        "quantity": 2,
+        "title": "Ravioles de Verdura",
+        "description": "Ravioles de Verdura con una suave salsa",
+        "price": 549,
+        "stock": 94,
+        "brand": "Rochino",
+        "category": "ravioles",
+        "image": "https://i.ibb.co/zXFXW2n/ravcrud.jpg"
+        
+      }
+    ]
+}
