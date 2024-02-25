@@ -5,7 +5,6 @@ import ShopStack from './ShopStack';
 import CartStack from './CartStack';
 import OrdersStack from './OrdersStack';
 import colors from '../utility/globals/colors';
-import Orders from '../screens/Orders';
 import TabBarIcon from '../components/TabBarIcon';
 
 const Tab = createBottomTabNavigator();

@@ -19,4 +19,30 @@ const OrderItem = ({order}) => {
 
 export default OrderItem
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    card:{
+        backgroundColor:colors.primary,
+        borderWidth:2,
+        margin:10,
+        padding:10,
+        borderRadius:10,
+        flexDirection:"row",
+        justifyContent:"space-between",
+        height:100,
+        alignItems:"center"
+        
+    },
+    textContainer:{
+        width:"70%"
+    },
+    text:{
+        fontSize:17,
+        fontFamily:fonts.RobotoMedium
+    },
+    text2:{
+        fontSize:19,
+        fontFamily:fonts.RobotoMedium,
+        color:"red"
+    }
+
+})

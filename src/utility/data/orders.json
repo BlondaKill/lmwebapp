@@ -3,7 +3,7 @@
         "total": 555,
         "id": 1,
         "userId": 2,
-        "createAt": 12345678,
+        "createdAt": 12345678,
         "items": [
             {
                 "id": 0,
@@ -22,7 +22,7 @@
         "id": 1,
         "quantity": 2,
         "userId": 2,
-        "createAt": 12345678,
+        "createdAt": 12345678,
         "items": [
         {
             "id": 1,
