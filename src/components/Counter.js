@@ -1,18 +1,22 @@
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native'
 import React, { useState } from 'react'
+import { useSelector, useDispatch} from 'react-redux'
+import { increment, decrement, incrementByAmount } from '../features/counter/counterSlice'
+
 
 const Counter = () => {
 
+    const dispatch = useDispatch()
     const [number, setNumber] = useState(0)
-    const [count, setCount] = useState(0)
-
+    const count = useSelector((state => state.counter.value))
+ 
     return (
         <View style={styles.counterContainer}>
-            <Button title='+' onPress={()=> setCount(count + 1)}/>
+            <Button title='+' onPress={()=> dispatch(increment())}/>
             <Text>{count}</Text>
-            <Button title='-'  onPress={ ()=> setCount(count - 1) }/>
+            <Button title='-'  onPress={ ()=> dispatch(decrement()) }/>
             <TextInput style={styles.input} onChangeText={ (t) => setNumber(parseInt(t)) }/>
-            <Button title='monto' onPress={ ()=> setCount(number) } />
+            <Button title='monto' onPress={ ()=> dispatch(incrementByAmount(number)) } />
         </View>
     )
 }
