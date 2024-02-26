@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Button } from 'react-native'
 import React, { useState } from 'react'
 
 const Counter = () => {
@@ -6,9 +6,9 @@ const Counter = () => {
     const [count, setCount] = useState(0)
     return (
         <View style={styles.counterContainer}>
-            <Button title='Aumentar' onPress={()=> }/>
+            <Button title='+' onPress={()=> setCount(count + 1)}/>
             <Text>{count}</Text>
-            <Button title='Disminuir'  onPress={ ()=>  }/>
+            <Button title='-'  onPress={ ()=> setCount(count - 1) }/>
         </View>
     )
 }
