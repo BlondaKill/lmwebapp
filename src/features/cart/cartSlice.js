@@ -4,15 +4,17 @@ const initialState = {
     items: [],
     total: 0
 }
-const cartSlice = createSlice({
+export const cartSlice = createSlice({
     name: "cart",
     initialState,
     reducers: {
         addCartItem:(state, actions) =>{
             state.items = [...state.items, actions.payload]
+            state.total = state.items.reduce((acc, item)=> acc = acc + item.price, 0)
         },
         deleteCartItem: (state, actions) =>{
             state.items = state.items.filter((item)=> item.id !== actions.payload)
+            state.total = state.items.reduce((acc, item)=> acc = acc + item.price, 0)
         }
     }
 })

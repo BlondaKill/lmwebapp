@@ -33,7 +33,7 @@ const ProductDetail = ({route}) => {
           <View style={styles.containerPrice}>
               <Text style={styles.price}>$ {product.price}</Text>
               <Pressable style={styles.buyNow} onPress={() =>dispatch(addCartItem(product)) }>
-                <Text style={styles.buyNowText}>Carrito</Text>
+                <Text style={styles.buyNowText}>Agregar</Text>
               </Pressable>
           </View>
         </View>
