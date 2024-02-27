@@ -13,10 +13,10 @@ const Counter = () => {
     return (
         <View style={styles.counterContainer}>
             <Button title='+' onPress={()=> dispatch(increment())}/>
-            <Text>{count}</Text>
+            <TextInput style={styles.input} value = {count.toString()} onChangeText={ (t) => setNumber(parseInt(t)) }/>
             <Button title='-'  onPress={ ()=> dispatch(decrement()) }/>
-            <TextInput style={styles.input} onChangeText={ (t) => setNumber(parseInt(t)) }/>
-            <Button title='monto' onPress={ ()=> dispatch(incrementByAmount(number)) } />
+            
+            <Button title='cantidad' onPress={ ()=> dispatch(incrementByAmount(number)) } />
         </View>
     )
 }
@@ -25,12 +25,14 @@ export default Counter
 
 const styles = StyleSheet.create({
         counterContainer:{
+            width: 200,
             flexDirection:"row",
             justifyContent:"space-around",
             alignItems:"center",
             margin:10
         },
         input:{
+            textAlign: "center",
             borderWidth:2,
             width:50,
         }
