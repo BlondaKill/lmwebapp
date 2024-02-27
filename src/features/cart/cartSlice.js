@@ -9,7 +9,19 @@ export const cartSlice = createSlice({
     initialState,
     reducers: {
         addCartItem:(state, actions) =>{
-            state.items = [...state.items, actions.payload]
+
+            const existsItem = state.items.some((item) => item.id === actions.payload.id)
+            if (!existsItem){
+                state.items = [...state.items, {...actions.payload, quantity:1}]
+            }else{
+                state.items = state.items.map((item) => {
+                    if(item.id === actions.payload.id){
+                        return {...item, quantity: item.quantity + 1}
+                    }
+                    return item
+                })
+            }
+            
             state.total = state.items.reduce((acc, item)=> acc = acc + item.price, 0)
         },
         deleteCartItem: (state, actions) =>{
