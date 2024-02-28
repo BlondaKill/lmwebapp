@@ -3,17 +3,17 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addCartItem } from '../features/cart/cartSlice'
 
-
-const Counter = ({startingValue, textButton, product, handlerAddCartItem}) => {
+const Counter = ({startingValue, textButton, product}) => {
 
     
     const [count, setCount] = useState(startingValue)
-    
+    const dispatch = useDispatch()
 
-    /*const handlerAddCartItem = (quantity) => {
-        dispatch(addCartItem({...product,quantity}))
+    const handlerAddCartItem = (quantity) => {
+        dispatch(addCartItem({...product, quantity}))
         setCount(1)
-      }*/
+      }
+    
 
  
     return (

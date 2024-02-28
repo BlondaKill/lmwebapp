@@ -5,11 +5,13 @@ import { Entypo } from '@expo/vector-icons'
 import { useDispatch } from 'react-redux'
 import { deleteCartItem, addCartItem } from '../features/cart/cartSlice'
 import Counter from './Counter'
+import CounterCart from './CounterCart'
 
 
 
 const CartItem = ({item}) => {
     const dispatch = useDispatch()
+
     const handlerAddCartItem = (quantity) => {
         dispatch(addCartItem({...item, quantity}))
       }
@@ -18,12 +20,8 @@ const CartItem = ({item}) => {
                 <View style={styles.textContainer}>
                     <Text style={styles.text}>{item.title}</Text>
                     <Text style={styles.text2}>{item.brand}</Text>
-                    <Counter 
-                        startingValue={item.quantity} 
-                        handlerAddCartItem={handlerAddCartItem}
-                        textButton="Agregar"
-                        />
-                    <Text style={styles.text2}>Precio: $ {item.price}</Text>
+                    <CounterCart item={item}/>
+                    <Text style={styles.text2}>Precio: ${item.price} </Text>
                 </View>
                 <Pressable onPress={() => dispatch(deleteCartItem(item.id))}>
                     <Entypo name="trash" size={30} color="black"/>

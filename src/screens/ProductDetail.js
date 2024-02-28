@@ -2,13 +2,10 @@ import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
 import products from '../utility/data/products.json'
 import { useEffect, useState } from 'react'
 import colors from '../utility/globals/colors'
-import { useDispatch } from 'react-redux'
-import { addCartItem } from '../features/cart/cartSlice'
 import Counter from '../components/Counter'
 
 
 const ProductDetail = ({route}) => {
-  const dispatch = useDispatch()
   const {productId} = route.params
   const [product, setProduct] = useState({})
 
@@ -16,11 +13,6 @@ const ProductDetail = ({route}) => {
     const productFinded = products.find(product => product.id === productId)
     setProduct(productFinded)
   }, [productId])
-
-  const handlerAddCartItem = (quantity) => {
-    dispatch(addCartItem({...product, quantity}))
-  }
-
 
 
   return (
@@ -37,12 +29,10 @@ const ProductDetail = ({route}) => {
           </View>
           <View style={styles.containerPrice}>
               <Text style={styles.price}>$ {product.price}</Text>
-              <Counter startingValue={1} handlerAddCartItem = {handlerAddCartItem} textButton="Carrito"/>
-                {
-                /*<Pressable style={styles.buyNow} onPress={() =>dispatch(addCartItem(product)) }>
-                  <Text style={styles.buyNowText}>Agregar</Text>
-                  </Pressable>*/
-                  }
+              <Counter 
+              startingValue={1} 
+              product={product}
+              textButton="Carrito"/>             
           </View>
         </View>
       </View>

@@ -5,6 +5,7 @@ import {Ionicons} from "@expo/vector-icons"
 
 
 const Header = ({title="Rochino", navigation}) => {
+
     return  <View style={styles.container}>
                 {navigation.canGoBack() && 
                 <Pressable style={styles.goBack} onPress={()=> navigation.goBack()}>
