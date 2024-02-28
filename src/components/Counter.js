@@ -1,22 +1,18 @@
-import { StyleSheet, Text, View, Button, TextInput } from 'react-native'
-import React, { useState } from 'react'
-import { useSelector, useDispatch} from 'react-redux'
-import { increment, decrement, incrementByAmount } from '../features/counter/counterSlice'
+import { StyleSheet, View, Button, Text } from 'react-native'
+import { useState } from 'react'
 
 
-const Counter = () => {
+const Counter = ({handlerAddCartItem}) => {
 
-    const dispatch = useDispatch()
     const [number, setNumber] = useState(0)
-    const count = useSelector((state => state.counter.value))
+    const [count, setCount] = useState(1)
  
     return (
         <View style={styles.counterContainer}>
-            <Button title='+' onPress={()=> dispatch(increment())}/>
-            <TextInput style={styles.input} value = {count.toString()} onChangeText={ (t) => setNumber(parseInt(t)) }/>
-            <Button title='-'  onPress={ ()=> dispatch(decrement()) }/>
-            
-            <Button title='cantidad' onPress={ ()=> dispatch(incrementByAmount(number)) } />
+            <Button title='+' onPress={()=> setCount(count + 1)}/>
+            <Text style={styles.input}>{count}</Text>
+            <Button title='-'  onPress={ ()=> setCount(count - 1) }/>          
+            <Button title='carrito' onPress={()=> handlerAddCartItem(count)} />
         </View>
     )
 }
@@ -33,7 +29,6 @@ const styles = StyleSheet.create({
         },
         input:{
             textAlign: "center",
-            borderWidth:2,
             width:50,
         }
 

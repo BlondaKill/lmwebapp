@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import colors from '../utility/globals/colors'
 import { useDispatch } from 'react-redux'
 import { addCartItem } from '../features/cart/cartSlice'
+import Counter from '../components/Counter'
 
 
 const ProductDetail = ({route}) => {
@@ -15,6 +16,10 @@ const ProductDetail = ({route}) => {
     const productFinded = products.find(product => product.id === productId)
     setProduct(productFinded)
   }, [productId])
+
+  const handlerAddCartItem = (quantity) => {
+    dispatch(addCartItem({...product, quantity}))
+  }
 
 
 
@@ -32,9 +37,12 @@ const ProductDetail = ({route}) => {
           </View>
           <View style={styles.containerPrice}>
               <Text style={styles.price}>$ {product.price}</Text>
-              <Pressable style={styles.buyNow} onPress={() =>dispatch(addCartItem(product)) }>
-                <Text style={styles.buyNowText}>Agregar</Text>
-              </Pressable>
+              <Counter handlerAddCartItem = {handlerAddCartItem}/>
+                {
+                /*<Pressable style={styles.buyNow} onPress={() =>dispatch(addCartItem(product)) }>
+                  <Text style={styles.buyNowText}>Agregar</Text>
+                  </Pressable>*/
+                  }
           </View>
         </View>
       </View>

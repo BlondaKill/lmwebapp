@@ -12,11 +12,11 @@ export const cartSlice = createSlice({
 
             const existsItem = state.items.some((item) => item.id === actions.payload.id)
             if (!existsItem){
-                state.items = [...state.items, {...actions.payload, quantity:1}]
+                state.items = [...state.items, {...actions.payload}]
             }else{
                 state.items = state.items.map((item) => {
                     if(item.id === actions.payload.id){
-                        return {...item, quantity: item.quantity + 1}
+                        return {...item, quantity: item.quantity + actions.payload.quantity}
                     }
                     return item
                 })
@@ -26,7 +26,7 @@ export const cartSlice = createSlice({
         },
         deleteCartItem: (state, actions) =>{
             state.items = state.items.filter((item)=> item.id !== actions.payload)
-            state.total = state.items.reduce((acc, item)=> acc = acc + item.price, 0)
+            state.total = state.items.reduce((acc, item)=> acc = acc + (item.price * item.quantity), 0)
         }
     }
 })
