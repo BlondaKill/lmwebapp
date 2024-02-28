@@ -3,18 +3,26 @@ import colors from '../utility/globals/colors'
 import fonts from '../utility/globals/fonts'
 import { Entypo } from '@expo/vector-icons'
 import { useDispatch } from 'react-redux'
-import { deleteCartItem } from '../features/cart/cartSlice'
+import { deleteCartItem, addCartItem } from '../features/cart/cartSlice'
+import Counter from './Counter'
 
 
 
 const CartItem = ({item}) => {
     const dispatch = useDispatch()
+    const handlerAddCartItem = (quantity) => {
+        dispatch(addCartItem({...item, quantity}))
+      }
     return (
         <View style={styles.card}>
                 <View style={styles.textContainer}>
                     <Text style={styles.text}>{item.title}</Text>
                     <Text style={styles.text2}>{item.brand}</Text>
-                    <Text style={styles.text2}>Unidades: {item.quantity}</Text>
+                    <Counter 
+                        startingValue={item.quantity} 
+                        handlerAddCartItem={handlerAddCartItem}
+                        textButton="Agregar"
+                        />
                     <Text style={styles.text2}>Precio: $ {item.price}</Text>
                 </View>
                 <Pressable onPress={() => dispatch(deleteCartItem(item.id))}>
@@ -36,7 +44,6 @@ const styles = StyleSheet.create({
         borderRadius:10,
         flexDirection:"row",
         justifyContent:"space-between",
-        height:100,
         alignItems:"center"
     },
     textContainer:{

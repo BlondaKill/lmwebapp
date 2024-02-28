@@ -37,7 +37,7 @@ const ProductDetail = ({route}) => {
           </View>
           <View style={styles.containerPrice}>
               <Text style={styles.price}>$ {product.price}</Text>
-              <Counter handlerAddCartItem = {handlerAddCartItem}/>
+              <Counter startingValue={1} handlerAddCartItem = {handlerAddCartItem} textButton="Carrito"/>
                 {
                 /*<Pressable style={styles.buyNow} onPress={() =>dispatch(addCartItem(product)) }>
                   <Text style={styles.buyNowText}>Agregar</Text>

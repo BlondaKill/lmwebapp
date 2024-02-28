@@ -8,7 +8,7 @@ const CardCategory = ({item, navigation}) => {
     return (
         <Pressable onPress={()=>navigation.navigate("ProductsByCategory",{categorySelected:item})}>
             <ShadowPrimary style={styles.container}>
-                <Text style={styles.text}>{item}</Text>
+                <Text style={styles.input}>{item}</Text>
             </ShadowPrimary>
         </Pressable>
     )
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 
 
     },
-    text:{
+    input:{
         fontSize:40,
         fontFamily: fonts.CookieRegular,
     }    
