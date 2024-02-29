@@ -4,7 +4,8 @@
         "title": "Ravioles de Ricota",
         "description": "Ravioles de Ricota y Nuez",
         "price": 47,
-        "stock": 133,      
+        "stock": 133,   
+        "brand": "Rochino",   
         "category": "ravioles",       
         "image": "https://i.ibb.co/CHzFZvH/rav.jpg"
       },
@@ -36,7 +37,7 @@
     "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
     "price": 1249,
     "stock": 36,
-    "brand": "Samsung",
+    "brand": "Rochino",
     "category": "ravioles",
     "image":  "https://i.ibb.co/CHzFZvH/rav.jpg"
     
@@ -49,11 +50,9 @@
     "discountPercentage": 17.91,
     "rating": 4.3,
     "stock": 123,
-    "brand": "OPPO",
+    "brand": "Rochino",
     "category": "ravioles",
-    
     "image":"https://i.ibb.co/CHzFZvH/rav.jpg"
-      
   },
   {
     "id": 5,
@@ -61,7 +60,7 @@
     "description": "Sorrentinos de una suave muzzarella italiana y jamon cocido",
     "price": 499,
     "stock": 32,
-    "brand": "Huawei",
+    "brand": "Rochino",
     "category": "sorrentinos",
     "image": "https://i.ibb.co/CHzFZvH/rav.jpg"
   },
@@ -71,7 +70,7 @@
     "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
     "price": 1749,
     "stock": 83,
-    "brand": "Apple",
+    "brand": "Rochino",
     "category": "sorrentinos",
     "image": "https://i.ibb.co/bdj4cxH/pizza.jpg"
   },
@@ -81,17 +80,17 @@
     "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
     "price": 1499,
     "stock": 50,
-    "brand": "Samsung",
+    "brand": "Rochino",
     "category": "sorrentinos",
     "image": "https://i.ibb.co/bdj4cxH/pizza.jpg"
   },
   {
     "id": 8,
     "title": "Microsoft Surface Laptop 4",
-    "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+    "description": "Style and speed. Stand out on HD video ",
     "price": 1499,
     "stock": 68,
-    "brand": "Microsoft Surface",
+    "brand": "Rochino",
     "category": "sorrentinos",
     "image": "https://i.ibb.co/93SdPNY/tart.jpg"
   },
@@ -101,7 +100,7 @@
     "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
     "price": 1099,
     "stock": 96,
-    "brand": "Infinix",
+    "brand": "Rochino",
     "category": "sorrentinos",
     "image": "https://i.dummyjson.com/data/products/9/1.jpg"
       
@@ -109,10 +108,10 @@
   {
     "id": 10,
     "title": "HP Pavilion 15-DK1056WM",
-    "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+    "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10",
     "price": 1099,
     "stock": 89,
-    "brand": "HP Pavilion",
+    "brand": "Rochino",
     "category": "lasagna",
     "image": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
   },
@@ -122,7 +121,7 @@
     "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
     "price": 13,
     "stock": 65,
-    "brand": "Impression of Acqua Di Gio",
+    "brand": "Rochino",
     "category": "lasagna",
     "image": 
       "https://i.dummyjson.com/data/products/11/thumbnail.jpg"
@@ -134,7 +133,7 @@
     "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
     "price": 40,
     "stock": 52,
-    "brand": "Royal_Mirage",
+    "brand": "Rochino",
     "category": "lasagna",
     "image": 
       "https://i.dummyjson.com/data/products/12/thumbnail.jpg"
@@ -143,119 +142,91 @@
   {
     "id": 13,
     "title": "Fog Scent Xpressio Perfume",
-    "description": "Product details of Best Fog Scent Xpressio Perfume 100ml For Men cool long lasting perfumes for Men",
-    "price": 13,
-    
+    "description": "Product details of Best Fog",
+    "price": 13,   
     "stock": 61,
-    "brand": "Fog Scent Xpressio",
+    "brand": "Rochino",
     "category": "lasagna",
-    
     "image": 
       "https://i.dummyjson.com/data/products/13/thumbnail.webp"
-    
   },
   {
     "id": 14,
     "title": "Non-Alcoholic Concentrated Perfume Oil",
-    "description": "Original Al Munakh® by Mahal Al Musk | Our Impression of Climate | 6ml Non-Alcoholic Concentrated Perfume Oil",
+    "description": "Original",
     "price": 120,
-   
     "stock": 114,
-    "brand": "Al Munakh",
+    "brand": "Rochino",
     "category": "fideos",
-   
-    "image": 
-      "https://i.dummyjson.com/data/products/14/thumbnail.jpg"
-    
+    "image": "https://i.ibb.co/bJHYVcN/spag.jpg"
   },
   {
     "id": 15,
     "title": "Eau De Perfume Spray",
-    "description": "Genuine  Al-Rehab spray perfume from UAE/Saudi Arabia/Yemen High Quality",
+    "description": "Genuine  Al-Rehab spray perfume",
     "price": 30,
-    
     "stock": 105,
-    "brand": "Lord - Al-Rehab",
+    "brand": "Rochino",
     "category": "fideos",
-    
-    "image": 
-      "https://i.dummyjson.com/data/products/15/thumbnail.jpg"
-    
+    "image": "https://i.ibb.co/bJHYVcN/spag.jpg"  
   },
   {
     "id": 16,
     "title": "Hyaluronic Acid Serum",
-    "description": "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
+    "description": "L'OrÃ©al Paris",
     "price": 19,
     "stock": 110,
-    "brand": "L'Oreal Paris",
+    "brand": "Rochino",
     "category": "fideos",
-    "image": 
-      "https://i.dummyjson.com/data/products/16/thumbnail.jpg"
-    
+    "image": "https://i.ibb.co/bJHYVcN/spag.jpg"    
   },
   {
     "id": 17,
     "title": "Tree Oil 30ml",
-    "description": "Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
+    "description": "Tea tree oil",
     "price": 12,
-    
     "stock": 78,
-    "brand": "Hemani Tea",
+    "brand": "Rochino",
     "category": "crepitos",
-    
-    "image": 
-      "https://i.dummyjson.com/data/products/17/thumbnail.jpg"
-    
+    "image": "https://i.ibb.co/vJVSyTv/crep.jpg"
   },
   {
     "id": 18,
     "title": "Oil Free Moisturizer 100ml",
-    "description": "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
+    "description": "Dermive Oil Free.",
     "price": 40,
     "stock": 88,
-    "brand": "Dermive",
-    "category": "crepitos",
-    
-    "image": 
-      "https://i.dummyjson.com/data/products/18/thumbnail.jpg"
-    
+    "brand": "Rochino",
+    "category": "crepitos",    
+    "image": "https://i.ibb.co/ZcvC28Z/crepcrud.jpg"
   },
   {
     "id": 19,
     "title": "Skin Beauty Serum.",
-    "description": "Product name: rorec collagen hyaluronic acid white face serum riceNet weight: 15 m",
+    "description": "Product name: rorec collagen",
     "price": 46,
-    
     "stock": 54,
-    "brand": "ROREC White Rice",
+    "brand": "Rochino",
     "category": "crepitos",
-    
-    "images":
-      "https://i.dummyjson.com/data/products/19/thumbnail.jpg"
-    
+    "images": "https://i.ibb.co/vJVSyTv/crep.jpg" 
   },
   {
     "id": 20,
     "title": "Freckle Treatment Cream- 15gm",
-    "description": "Fair & Clear is Pakistan's only pure Freckle cream which helpsfade Freckles, Darkspots and pigments. Mercury level is 0%, so there are no side effects.",
+    "description": "Fair & Clear is Pakistan's only pure Freckl.",
     "price": 70,
     "stock": 140,
-    "brand": "Fair & Clear",
+    "brand": "Rochino",
     "category": "tartas",
-    
-    "image": 
-      "https://i.dummyjson.com/data/products/20/thumbnail.jpg"
-    
+    "image": "https://i.ibb.co/Cnh6bWs/tartcrud.jpg"
   },
   {
     "id": 21,
     "title": "- Daal Masoor 500 grams",
     "description": "Fine quality Branded Product Keep in a cool and dry place",
     "price": 20,
-    
     "stock": 133,
-    "brand": "Saaf & Khaas",
+    "brand": "Rochino",
     "category": "tartas",
     "image": 
       "https://i.dummyjson.com/data/products/21/3.jpg"
@@ -266,147 +237,120 @@
     "title": "Elbow Macaroni - 400 gm",
     "description": "Product details of Bake Parlor Big Elbow Macaroni - 400 gm",
     "price": 14,
-    
     "stock": 146,
-    "brand": "Bake Parlor Big",
+    "brand": "Rochino",
     "category": "tartas",
-    "image": 
-      "https://i.dummyjson.com/data/products/22/3.jpg"
-    
+    "image": "https://i.ibb.co/93SdPNY/tart.jpg" 
   },
   {
     "id": 23,
     "title": "Orange Essence Food Flavou",
-    "description": "Specifications of Orange Essence Food Flavour For Cakes and Baking Food Item",
+    "description": "Specifications of Orangem",
     "price": 14,
-    
     "stock": 26,
-    "brand": "Baking Food Items",
-    "category": "empanadas",
-    
-    "image": 
-      "https://i.dummyjson.com/data/products/23/thumbnail.jpg"
-    
+    "brand": "Rochino",
+    "category": "pizzas",
+    "image": "https://i.ibb.co/bdj4cxH/pizza.jpg"
   },
   {
     "id": 24,
     "title": "cereals muesli fruit nuts",
-    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "description": "original fauji cereal muesli",
     "price": 46,
     "stock": 113,
-    "brand": "fauji",
-    "category": "empanadas",
-    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
-  
+    "brand": "Rochino",
+    "category": "pizzas",
+    "image": "https://i.ibb.co/94c9xZy/pizzacong.jpg"
   },
   {
     "id": 25,
     "title": "cereals muesli fruit nuts",
-    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "description": "original fauji cereal muesli",
     "price": 46,
     "stock": 113,
-    "brand": "fauji",
-    "category": "empanadas",
-    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
-  
+    "brand": "Rochino",
+    "category": "pizzas",
+    "image": "https://i.ibb.co/bdj4cxH/pizza.jpg"
   },
   {
     "id": 26,
     "title": "cereals muesli fruit nuts",
-    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "description": "original fauji cereal",
     "price": 46,
     "stock": 113,
-    "brand": "fauji",
-    "category": "empanadas",
-    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
-  
+    "brand": "Rochino",
+    "category": "pizzas",
+    "image": "https://i.ibb.co/bdj4cxH/pizza.jpg" 
   },
   {
     "id": 27,
     "title": "cereals muesli fruit nuts",
-    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "description": "original fauji cereal muesli 250gm box",
     "price": 46,
     "stock": 113,
-    "brand": "fauji",
+    "brand": "Rochino",
     "category": "pizzas",
-    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
-  
+    "image": "https://i.ibb.co/bdj4cxH/pizza.jpg"
   },
   {
     "id": 28,
     "title": "cereals muesli fruit nuts",
-    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "description": "original fauji cereal",
     "price": 46,
     "stock": 113,
-    "brand": "fauji",
+    "brand": "Rochino",
     "category": "empanadas",
-    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
-  
+    "image": "https://i.ibb.co/3mC3tjB/empcrud.jpg"
   },
   {
     "id": 29,
     "title": "cereals muesli fruit nuts",
-    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "description": "original fauji cereal muesli 250gm",
     "price": 46,
     "stock": 113,
-    "brand": "fauji",
+    "brand": "Rochino",
     "category": "empanadas",
-    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
-  
+    "image": "https://i.ibb.co/LZ4bDS1/emp.jpg"
   },
   {
     "id": 30,
     "title": "cereals muesli fruit nuts",
-    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "description": "original fauji cereal muesli",
     "price": 46,
     "stock": 113,
-    "brand": "fauji",
+    "brand": "Rochino",
     "category": "empanadas",
-    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
-  
+    "image": "https://i.ibb.co/CPmW99J/emp3.jpg"
   },
   {
     "id": 31,
     "title": "cereals muesli fruit nuts",
-    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "description": "original fauji cereal muesli",
     "price": 46,
     "stock": 113,
-    "brand": "fauji",
-    "category": "empanadas",
-    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
-  
+    "brand": "Rochino",
+    "category": "canelones",
+    "image": "https://i.ibb.co/kKHbRB4/cane.jpg"
   },
   {
     "id": 32,
     "title": "cereals muesli fruit nuts",
-    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "description": "original fauji cereal muesli 250g",
     "price": 46,
     "stock": 113,
-    "brand": "fauji",
-    "category": "empanadas",
-    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
-  
+    "brand": "Rochino",
+    "category": "canelones",
+    "image": "https://i.ibb.co/2NxWX2n/canecar.jpg"
   },
   {
     "id": 33,
     "title": "cereals muesli fruit nuts",
-    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+    "description": "original fauji cereal muesli",
     "price": 46,
     "stock": 113,
-    "brand": "fauji",
-    "category": "empanadas",
-    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
-  
-  },
-  {
-    "id": 34,
-    "title": "cereals muesli fruit nuts",
-    "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
-    "price": 46,
-    "stock": 113,
-    "brand": "fauji",
-    "category": "empanadas",
-    "image": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
+    "brand": "Rochino",
+    "category": "canelones",
+    "image": "https://i.ibb.co/kKHbRB4/cane.jpg"
   
   }
 ]
