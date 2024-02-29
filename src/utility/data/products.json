@@ -102,7 +102,7 @@
     "stock": 96,
     "brand": "Rochino",
     "category": "sorrentinos",
-    "image": "https://i.dummyjson.com/data/products/9/1.jpg"
+    "image": "https://i.ibb.co/CHzFZvH/rav.jpg"
       
   },
   {
@@ -113,7 +113,7 @@
     "stock": 89,
     "brand": "Rochino",
     "category": "lasagna",
-    "image": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
+    "image": "https://i.ibb.co/tZKKry2/noq.jpg"
   },
   {
     "id": 11,
@@ -123,9 +123,7 @@
     "stock": 65,
     "brand": "Rochino",
     "category": "lasagna",
-    "image": 
-      "https://i.dummyjson.com/data/products/11/thumbnail.jpg"
-    
+    "image": "https://i.ibb.co/tZKKry2/noq.jpg"
   },
   {
     "id": 12,
@@ -135,9 +133,7 @@
     "stock": 52,
     "brand": "Rochino",
     "category": "lasagna",
-    "image": 
-      "https://i.dummyjson.com/data/products/12/thumbnail.jpg"
-    
+    "image": "https://i.ibb.co/tZKKry2/noq.jpg"  
   },
   {
     "id": 13,
@@ -147,8 +143,7 @@
     "stock": 61,
     "brand": "Rochino",
     "category": "lasagna",
-    "image": 
-      "https://i.dummyjson.com/data/products/13/thumbnail.webp"
+    "image": "https://i.ibb.co/tZKKry2/noq.jpg"
   },
   {
     "id": 14,
@@ -208,7 +203,7 @@
     "stock": 54,
     "brand": "Rochino",
     "category": "crepitos",
-    "images": "https://i.ibb.co/vJVSyTv/crep.jpg" 
+    "images": "https://i.ibb.co/ZcvC28Z/crepcrud.jpg"
   },
   {
     "id": 20,
@@ -228,8 +223,7 @@
     "stock": 133,
     "brand": "Rochino",
     "category": "tartas",
-    "image": 
-      "https://i.dummyjson.com/data/products/21/3.jpg"
+    "image": "https://i.ibb.co/Cnh6bWs/tartcrud.jpg"
     
   },
   {
