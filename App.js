@@ -6,11 +6,6 @@ import MainNavigator from './src/navigation/MainNavigator'
 import { store } from './src/app/store'
 import { Provider } from 'react-redux'
 
-
-
-
-
-
 const App = () => {
 
   const [fontsLoaded] = useFonts(fontGroup)
@@ -23,7 +18,6 @@ const App = () => {
       <Provider store={store}>
         <MainNavigator/>
       </Provider>
-      
     </>
   )
 }

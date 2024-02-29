@@ -12,10 +12,10 @@ const Counter = ({startingValue, textButton, product}) => {
     const handlerAddCartItem = (quantity) => {
         dispatch(addCartItem({...product, quantity}))
         setCount(1)
-      }
+        }
     
 
- 
+
     return (
         <View style={styles.counterContainer}>
             <Button title='+' onPress={()=> setCount(count + 1)}/>

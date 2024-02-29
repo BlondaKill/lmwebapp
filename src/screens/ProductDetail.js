@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
 import products from '../utility/data/products.json'
 import { useEffect, useState } from 'react'
 import colors from '../utility/globals/colors'

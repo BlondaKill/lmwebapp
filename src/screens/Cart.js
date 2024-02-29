@@ -10,7 +10,7 @@ const Cart = () => {
     const cart = useSelector((state)=> state.cart)
 
     
-  return (
+    return (
     <View style={styles.container}>
         
         <FlatList

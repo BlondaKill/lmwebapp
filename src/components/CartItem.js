@@ -4,7 +4,6 @@ import fonts from '../utility/globals/fonts'
 import { Entypo } from '@expo/vector-icons'
 import { useDispatch } from 'react-redux'
 import { deleteCartItem, addCartItem } from '../features/cart/cartSlice'
-import Counter from './Counter'
 import CounterCart from './CounterCart'
 
 
@@ -14,7 +13,7 @@ const CartItem = ({item}) => {
 
     const handlerAddCartItem = (quantity) => {
         dispatch(addCartItem({...item, quantity}))
-      }
+        }
     return (
         <View style={styles.card}>
                 <View style={styles.textContainer}>

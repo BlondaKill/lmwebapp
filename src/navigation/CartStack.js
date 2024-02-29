@@ -5,7 +5,7 @@ import Header from '../components/Header'
 
 const Stack = createNativeStackNavigator()
 const CartStack = () => {
-  return (
+    return (
     <Stack.Navigator
         initialRouteName='Cart'
         screenOptions={({navigation})=>{

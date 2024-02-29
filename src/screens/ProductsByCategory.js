@@ -1,5 +1,4 @@
 import { FlatList, StyleSheet } from 'react-native'
-import Header from '../components/Header'
 import products from '../utility/data/products.json'
 import { useEffect, useState } from 'react'
 import ProductByCategory from '../components/ProductByCategory'
@@ -26,8 +25,6 @@ const ProductsByCategory = ({navigation, route}) => {
   }, [categorySelected, keyword])
 
 
-
-
   return (
     <>
       <Search handlerKeyWord={handlerKeyWord}/>
@@ -36,8 +33,6 @@ const ProductsByCategory = ({navigation, route}) => {
         keyExtractor={item => item.id}
         renderItem={({item})=> <ProductByCategory navigation={navigation} item={item}/>} 
     />
-    
-    
     </>
   )
 }
