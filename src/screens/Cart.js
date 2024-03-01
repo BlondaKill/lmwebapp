@@ -38,14 +38,14 @@ const styles = StyleSheet.create({
     },
     confirmContainer:{
         flexDirection:"row",
-        backgroundColor:"gray",
+        backgroundColor:"pink",
         padding:25,
         justifyContent:"space-between",
     },
     confirmText:{
         fontFamily:fonts.OleoScriptRegular,
-        fontSize:18,
-        color:"white"
+        fontSize:23,
+        color:"black"
     }
 })
   
