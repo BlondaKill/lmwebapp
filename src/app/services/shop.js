@@ -4,8 +4,8 @@ export const shopApi = createApi({
     reducerPath:"shopApi",
     baseQuery: fetchBaseQuery({baseUrl:"https://dappweb-dbd08-default-rtdb.firebaseio.com/"}),
     endpoints:(builder)=>({
-        getProducts: builder.query({
-            query:() => "/products.json"
+        getProductsByCategory: builder.query({
+            query:(category) => `/products.json?orderBy= "category"&equalTo = "${category}"`
         }),
         getCategories:builder.query({
             query: () => "/categories.json"
@@ -15,4 +15,4 @@ export const shopApi = createApi({
 })
 
 
-export const {useGetProductsQuery, useGetCategoriesQuery} = shopApi
+export const { useGetCategoriesQuery } = shopApi

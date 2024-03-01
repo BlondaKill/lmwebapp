@@ -5,7 +5,9 @@ import CardCategory from './CardCategory'
 
 
 const Categories = ({navigation}) => {
+
   const {data: categories} = useGetCategoriesQuery()
+  
   return (
     <FlatList
             data={categories}
