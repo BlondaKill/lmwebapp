@@ -1,19 +1,18 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
-import products from '../utility/data/products.json'
 import { useEffect, useState } from 'react'
 import colors from '../utility/globals/colors'
 import Counter from '../components/Counter'
+import { useDispatch } from 'react-redux'
+import { addCartItem } from '../features/cart/cartSlice'
+import { useGetProductQuery } from '../app/services/shop'
 
 
 const ProductDetail = ({route}) => {
+  const dispatch = useDispatch()
   const {productId} = route.params
-  const [product, setProduct] = useState({})
+  const {data:product, isLoading} = useGetProductQuery(productId)
 
-  useEffect(() => {
-    const productFinded = products.find(product => product.id === productId)
-    setProduct(productFinded)
-  }, [productId])
-
+  if(isLoading) return <View><Text>cargando...</Text></View>
 
   return (
     <View style={styles.container}>

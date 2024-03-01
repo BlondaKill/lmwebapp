@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import ProductByCategory from '../components/ProductByCategory'
 import Search from '../components/Search'
 import { useGetProductsByCategoryQuery } from '../app/services/shop'
+import { isLoading } from 'expo-font'
 
 
 
@@ -26,7 +27,7 @@ const ProductsByCategory = ({navigation, route}) => {
       return productTitleLower.includes(keywordLower)}))
   }, [categorySelected, keyword, products])
 
-
+  if(isLoading) return <View><Text>cargando...</Text></View>
   return (
     <>
       <Search handlerKeyWord={handlerKeyWord}/>
