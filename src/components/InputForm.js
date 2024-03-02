@@ -4,21 +4,23 @@ import colors from '../utility/globals/colors'
 
 
 
-const InputForm = ({label,value, onChangeText}) => {
+const InputForm = ({label,value, onChangeText, isSecure}) => {
 
 
-  return (
-    <View style={styles.inputContainer}>
-        <Text style={styles.titleInput}>{label}</Text>
-        <TextInput  
-            value={value}  
-            onChangeText={onChangeText} 
-            style={styles.input}
+    return (
+        <View style={styles.inputContainer}>
+            <Text style={styles.titleInput}>{label}</Text>
+            <TextInput  
+                value={value}  
+                onChangeText={onChangeText} 
+                style={styles.input}
+                secureTextEntry={isSecure}
+
             
-        />
+            />
         
-    </View>
-  )
+        </View>
+    )
 }
 
 
@@ -35,8 +37,8 @@ const styles = StyleSheet.create({
         borderBottomWidth:3,
         borderBottomColor: colors.white,
         padding:2,
-        fontFamily:fonts.CookieRegular,
-        fontSize:14,
+        fontFamily:fonts.OleoScriptBold,
+        fontSize:25,
         marginHorizontal:"5%",
         marginVertical:10
     },
