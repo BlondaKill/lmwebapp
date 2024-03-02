@@ -7,7 +7,7 @@ import AuthStack from './AuthStack';
 
 const MainNavigator = () => {
 
-    const [idToken, setToken] = useState("") 
+    const [idToken, setidToken] = useState("") 
     return (
         <NavigationContainer>
             {idToken ? <TabNavigator/> : <AuthStack/>}
