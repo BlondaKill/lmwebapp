@@ -12,7 +12,7 @@ const Login = ({navigation}) => {
         const dispatch = useDispatch()
         const [email,setEmail] = useState("")
         const [password,setPassword] = useState("")
-        const [triggerLogin] = useLoginMutation()
+        
     
         const onSubmit = async () => {
             const {data} = await  triggerLogin({email,password})
@@ -40,7 +40,7 @@ const Login = ({navigation}) => {
                     error=""
                 />
                 <SubmitButton onPress={onSubmit} title="Iniciar Sesion"/>
-                <Text style={styles.sub}>Ya sos Cliente?</Text>
+                <Text style={styles.sub}>No sos Cliente?</Text>
                 <Pressable onPress={()=> navigation.navigate("Register")} >
                     <Text style={styles.subLink}>Registrate</Text>
                 </Pressable>
@@ -71,11 +71,11 @@ const styles = StyleSheet.create({
         fontFamily:fonts.CookieRegular
       },
       sub:{
-        fontSize:14,
+        fontSize:30,
         fontFamily:fonts.CookieRegular
       },
       subLink:{
-        fontSize:14,
+        fontSize:25,
         fontFamily:fonts.CookieRegular,
         color:"blue"
       }
