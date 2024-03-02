@@ -1,5 +1,4 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
-import { useEffect, useState } from 'react'
+import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
 import colors from '../utility/globals/colors'
 import Counter from '../components/Counter'
 import { useDispatch } from 'react-redux'

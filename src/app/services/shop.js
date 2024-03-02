@@ -9,7 +9,6 @@ export const shopApi = createApi({
             transformResponse:(response)=>{
                 const data = Object.values(response)
                 return data 
-
             }
         }),
         getCategories:builder.query({

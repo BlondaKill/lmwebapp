@@ -3,6 +3,7 @@ import { setupListeners } from '@reduxjs/toolkit/query'
 import { shopApi } from './services/shop'
 import cartReducer from '../features/cart/cartSlice'
 
+
 export const store = configureStore({
     reducer: {
       cart: cartReducer,
