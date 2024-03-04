@@ -2,6 +2,25 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 
 export const authApi = createApi({
-    reducerPath: "auth",
-    baseQuery: fetchBaseQuery({baseUrl:"https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[AIzaSyCWP2teZtjU26YOvhF_Y-tRYRMtZLhC8cs]"})
+    reducerPath: "authApi",
+    baseQuery: fetchBaseQuery({baseUrl:"https://identitytoolkit.googleapis.com/v1/]"}),
+    endpoints: (builder) => ({
+        register: builder.mutation({
+            query: (user) => ({
+                url: "accounts:signUp?key=[AIzaSyCWP2teZtjU26YOvhF_Y-tRYRMtZLhC8cs",
+                method: "POST",
+                body: user
+            })
+        }),
+        login: builder.mutation({
+            query: (user) => ({
+                url: "accounts:signInWithPassword?key=[AIzaSyCWP2teZtjU26YOvhF_Y-tRYRMtZLhC8cs",
+                method: "POST",
+                body: user
+
+            })
+        })
+    })
 })
+
+export const {useRegisterMutation, useLoginMutation} = authApi

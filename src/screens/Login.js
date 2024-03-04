@@ -5,13 +5,16 @@ import InputForm from '../components/InputForm'
 import SubmitButton from '../components/SubmitButton'
 import colors from '../utility/globals/colors'
 import fonts from '../utility/globals/fonts'
-
+import { useLoginMutation } from '../app/services/auth'
+import { setUser } from '../features/auth/authSlice'
 
 const Login = ({navigation}) => {
 
         const dispatch = useDispatch()
         const [email,setEmail] = useState("")
         const [password,setPassword] = useState("")
+        const [triggerLogin] = useLoginMutation()
+
         
     
         const onSubmit = async () => {

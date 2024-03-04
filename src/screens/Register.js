@@ -5,19 +5,24 @@ import InputForm from '../components/InputForm'
 import SubmitButton from '../components/SubmitButton'
 import colors from '../utility/globals/colors'
 import fonts from '../utility/globals/fonts'
+import { useRegisterMutation } from '../app/services/auth'
+import { setUser } from '../features/auth/authSlice'
+
 
 
 const Register = ({navigation}) => {
 
+        
         const dispatch = useDispatch()
         const [email,setEmail] = useState("")
         const [password,setPassword] = useState("")
         const [ confirmPassword, setConfirmPassword ] = useState("")
+        const [triggerRegister] = useRegisterMutation()
         
     
         const onSubmit = async () => {
             const {data} = await  triggerLogin({email,password})
-            dispatch(setUser({email:data.email,idToken:data.idToken}))
+            dispatch(setUser({email:data.email, idToken: data.idToken}))
         }
 
 
