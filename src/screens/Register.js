@@ -7,6 +7,7 @@ import colors from '../utility/globals/colors'
 import fonts from '../utility/globals/fonts'
 import { useRegisterMutation } from '../app/services/auth'
 import { setUser } from '../features/auth/authSlice'
+import { registerSchema } from '../utility/validations/authSchema'
 
 
 
@@ -18,11 +19,23 @@ const Register = ({navigation}) => {
         const [password,setPassword] = useState("")
         const [confirmPassword, setConfirmPassword] = useState("")
         const [triggerRegister] = useRegisterMutation()
+        const [errorEmail, setErrorEmail] = useState("")
+        const [errorPassword, setErrorPassword] = useState("")
+        const [errorConfirmPassword, setErrorConfirmPassword] = useState("")
         
     
         const onSubmit = async () => {
+            try {
+                registerSchema.validateSync({email, password, confirmPassword})
             const {data} = await  triggerRegister({email,password})
             dispatch(setUser({email:data.email, idToken:data.idToken}))
+            } catch (error) {
+                switch(error.path){
+                    case "email":
+                        setErrorEmail(error.message)
+                }
+            }
+            
         }
 
 
@@ -34,7 +47,7 @@ const Register = ({navigation}) => {
                     value={email}
                     onChangeText={(t) => setEmail(t)}
                     isSecure={false}
-                    error=""
+                    error={errorEmail}
                 />
                 <InputForm
                     label="Password"
