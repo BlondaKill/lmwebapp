@@ -30,9 +30,21 @@ const Register = ({navigation}) => {
             const {data} = await  triggerRegister({email,password})
             dispatch(setUser({email:data.email, idToken:data.idToken}))
             } catch (error) {
+            setErrorEmail("")
+            setErrorPassword("")
+            setErrorConfirmPassword("")
                 switch(error.path){
-                    case "email":
+                    case"email":
                         setErrorEmail(error.message)
+                        break
+                    case "password":
+                        setErrorPassword(error.message)
+                        break
+                    case "confirmPassword":
+                        setConfirmPassword(error.message)  
+                        break
+                    default:
+                        break
                 }
             }
             
@@ -54,14 +66,14 @@ const Register = ({navigation}) => {
                     value={password}
                     onChangeText={(t) => setPassword(t)}
                     isSecure={true}
-                    error=""
+                    error={errorPassword}
                 />
                 <InputForm
                     label="Confirmar Password"
                     value={confirmPassword}
                     onChangeText={(t) => setConfirmPassword(t)}
                     isSecure={true}
-                    error=""
+                    error={errorConfirmPassword}
                 />
                 <SubmitButton onPress={onSubmit} title="Registrarme"/>
                 <Text style={styles.sub}>Ya sos Cliente?</Text>
@@ -101,6 +113,6 @@ const styles = StyleSheet.create({
       subLink:{
         fontSize:25,
         fontFamily:fonts.CookieRegular,
-        color:"blue"
+        color:"red"
       }
 })
