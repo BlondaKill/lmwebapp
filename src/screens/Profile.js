@@ -1,34 +1,19 @@
-import { StyleSheet, View, Image } from 'react-native'
-import { useState } from 'react'
+import { StyleSheet, Text, View,Image } from 'react-native'
 import AddButton from '../components/AddButton'
 
-const ImageSelector = () => {
 
-    const [image, setImage] = useState("")
-
-    const pickImage = () => {
-        console.log("tomar imagen")
-    }
-    const confirmImage = () => {
-        console.log("guardar imagen")
-    }
-
-
-    return (
-        <View style={styles.container}>
-            <Image
-                source={require("../../assets/user.png")}
-                style={styles.image}
-                resizeMode='cover'
-            
-            />
-
-            <AddButton title="Tomar foto" onPress={pickImage}/>
-            <AddButton title="Confirmar foto" onPress={confirmImage}/>
-
-        </View>
-        
-    )
+const Profile = ({navigation}) => {
+    
+  return (
+    <View style={styles.container}>
+        <Image
+            source={data ? {uri:data.image}:require("../../assets/user.png")}
+            style={styles.image}
+            resizeMode='cover'
+        />
+        <AddButton title={"Agregar Imagen de perfil"} onPress={()=> navigation.navigate("ImageSelector")}/>
+    </View>
+  )
 }
 
 export default Profile
@@ -43,5 +28,4 @@ const styles = StyleSheet.create({
         width:200,
         height:200
     }
-
 })
