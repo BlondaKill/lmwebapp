@@ -8,7 +8,7 @@ import { useGetCategoriesQuery } from '../app/services/shop'
 const Profile = ({navigation}) => {
     const localId = useSelector((state)=> state.auth.localId)
     const {data} = useGetCategoriesQuery(localId)
-    
+
   return (
     <View style={styles.container}>
         <Image
@@ -16,7 +16,9 @@ const Profile = ({navigation}) => {
             style={styles.image}
             resizeMode='cover'
         />
+        <Text style={styles.text}>Piedras 1497</Text>
         <AddButton title={"Agregar Imagen de perfil"} onPress={()=> navigation.navigate("ImageSelector")}/>
+        <AddButton title={"Agregar Direccion"} onPress={()=> navigation.navigate("LocationSelector")}/>
     </View>
   )
 }
@@ -32,5 +34,9 @@ const styles = StyleSheet.create({
     image:{
         width:200,
         height:200
+    },
+    text: {
+        fontSize: 20,
+        marginVertical: 10
     }
 })
