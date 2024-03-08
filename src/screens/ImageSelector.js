@@ -8,14 +8,22 @@ const ImageSelector = () => {
     const [image, setImage] = useState("")
 
     const pickImage = async() => {
-        const {granted} = ImagePicker.requestCameraPermissionsAsync()
+
+        const {granted} = await ImagePicker.requestCameraPermissionsAsync()
+
         if(granted){
             let result = await ImagePicker.launchCameraAsync({
                 allowsEditing:true,
                 aspect:[4,3],
-                quality:0.3
+                quality:0.3,
+                base64:true
             })
+
+            if(result.canceled){
+                setImage('data:image/jpeg;base64,' + result.assets[0].base64)
+            }
         }
+
     }
     const confirmImage = () => {
         console.log("guardar imagen")
@@ -25,7 +33,7 @@ const ImageSelector = () => {
     return (
         <View style={styles.container}>
             <Image
-                source={require("../../assets/user.png")}
+                source={image ? {uri:image} : require("../../assets/user.png")}
                 style={styles.image}
                 resizeMode='cover'
             
