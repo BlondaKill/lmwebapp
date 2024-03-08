@@ -4,8 +4,10 @@ import Profile from '../screens/Profile'
 import ImageSelector from '../screens/ImageSelector'
 
 
+
 const Stack = createNativeStackNavigator()
 const ProfileStack = () => {
+    
     return (
     <Stack.Navigator
         initialRouteName='Profile'

@@ -1,8 +1,13 @@
 import { StyleSheet, Text, View,Image } from 'react-native'
 import AddButton from '../components/AddButton'
+import { useSelector } from 'react-redux'
+import { useGetCategoriesQuery } from '../app/services/shop'
+
 
 
 const Profile = ({navigation}) => {
+    const localId = useSelector((state)=> state.auth.localId)
+    const {data} = useGetCategoriesQuery(localId)
     
   return (
     <View style={styles.container}>

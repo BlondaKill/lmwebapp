@@ -1,11 +1,20 @@
 import { StyleSheet, View, Image } from 'react-native'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import AddButton from '../components/AddButton'
 import * as ImagePicker from 'expo-image-picker';
+import { useGetImageQuery, usePutImageMutation } from '../app/services/profile';
+import { useSelector } from 'react-redux';
 
-const ImageSelector = () => {
+const ImageSelector = ({navigation}) => {
 
     const [image, setImage] = useState("")
+    const [triggerImage] = usePutImageMutation()
+    const localId = useSelector((state) => state.auth.localId)
+    const {data, isSuccess} = useGetImageQuery(localId)
+
+    useEffect(() =>{
+        if(isSuccess && data) setImage(data.image)
+    },[isSuccess, data])
 
     const pickImage = async() => {
 
@@ -14,7 +23,7 @@ const ImageSelector = () => {
         if(granted){
             let result = await ImagePicker.launchCameraAsync({
                 allowsEditing:true,
-                aspect:[4,3],
+                aspect:[6,4],
                 quality:0.3,
                 base64:true
             })
@@ -26,7 +35,8 @@ const ImageSelector = () => {
 
     }
     const confirmImage = () => {
-        console.log("guardar imagen")
+        triggerImage({image, localId})
+        navigation.goBack()
     }
 
 

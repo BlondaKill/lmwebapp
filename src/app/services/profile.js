@@ -4,16 +4,18 @@ export const profileApi = createApi({
     reducerPath:"profileApi",
     baseQuery: fetchBaseQuery({baseUrl:"https://dappweb-dbd08-default-rtdb.firebaseio.com/"}),
     endpoints:(builder)=>({
-        postProfile: builder.mutation({
-            query:(image) => ({
-                url: "/profile.json",
+        putImage: builder.mutation({
+            query:(image, localId) => ({
+                url: `/profile/${localId}.json`,
                 method:"PUT",
-                body:image
+                body:{image}
             })
+        }),
+        getImage: builder.query({
+            query:(localId) => `/profile/${localId}.json`
         })
-
     })
 })
 
 
-export const {  } = shopApi
+export const { usePutImageMutation, useGetImageQuery } = profileApi
