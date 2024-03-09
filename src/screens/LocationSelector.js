@@ -28,6 +28,20 @@ const LocationSelector = ({navigation}) => {
 
   },[])
 
+  useEffect(()=>{
+    (async()=>{
+        if(location.latitude){
+            const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${location.latitude},${location.longitude}&key=AIzaSyCBZPbHfFf3Ogj7fE-BpCLibDEndbErOFU`)
+            const data = await response.json()
+        }    
+
+    })()
+  },[location])
+
+
+
+
+
   const onConfirmAddress = () => {
     navigation.goBack()
   }
