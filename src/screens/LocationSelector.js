@@ -32,35 +32,35 @@ const LocationSelector = ({navigation}) => {
 
   },[])
 
-  useEffect(()=>{
-    (async()=>{
-        if(location.latitude){
-            const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${location.latitude},${location.longitude}&key=AIzaSyCBZPbHfFf3Ogj7fE-BpCLibDEndbErOFU`)
-            const data = await response.json()
-            setAddress(data.results[0].formatted_address)
-        }    
+    useEffect(()=>{
+        (async()=>{
+            if(location.latitude){
+                const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${location.latitude},${location.longitude}&key=AIzaSyCBZPbHfFf3Ogj7fE-BpCLibDEndbErOFU`)
+                const data = await response.json()
+                setAddress(data.results[0].formatted_address)
+            }    
 
-    })()
-  },[location])
+        })()
+    },[location])
 
-  const onConfirmAddress = async () => {
+    const onConfirmAddress = async () => {
 
-    const locationFormatted = {
-        address,
-        location
+        const locationFormatted = {
+            address,
+            location
+        }
+        await triggerUserLocation({localId, locationFormatted})
+        navigation.goBack()
     }
-    await triggerUserLocation({localId, locationFormatted})
-    navigation.goBack()
-  }
-  
+    
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>{address}</Text>
-      <MapPreview latitude={location.latitude} longitude={location.longitude}/>
-      <AddButton title="Confirmar Localizacion"  onPress={onConfirmAddress} />
-    </View>
-  )
+    return (
+        <View style={styles.container}>
+        <Text style={styles.text}>{address}</Text>
+        <MapPreview latitude={location.latitude} longitude={location.longitude}/>
+        <AddButton title="Confirmar Localizacion"  onPress={onConfirmAddress} />
+        </View>
+    )
 }
 
 export default LocationSelector
