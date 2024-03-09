@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import { useState,useEffect } from 'react'
 import MapPreview from '../components/MapPreview '
 import AddButton from '../components/AddButton'
-
+import * as Location from "expo-location"
 
 
 const LocationSelector = ({navigation}) => {
