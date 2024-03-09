@@ -1,24 +1,27 @@
 import { StyleSheet, Text, View, FlatList, Pressable } from 'react-native'
 import CartItem from '../components/CartItem'
 import fonts from '../utility/globals/fonts'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { usePostOrderMutation } from '../app/services/orders'
+import { deleteCart } from '../features/cart/cartSlice'
 
 
 
 const Cart = () => {
 
+    const dispatch = useDispatch()
     const cart = useSelector((state)=> state.cart)
     const localId = useSelector((state)=> state.auth.localId)
     const [triggerAddOrder] = usePostOrderMutation()
 
-    const handlerAddOrder = () => {
+    const handlerAddOrder = async () => {
         const createdAt = new Date().toLocaleString()
         const order = {
             createdAt,
             ...cart
         }
-        triggerAddOrder({localId, order})
+        await triggerAddOrder({localId, order})
+        dispatch(deleteCart)
     }
 
     

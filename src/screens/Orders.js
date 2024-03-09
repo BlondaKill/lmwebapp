@@ -1,9 +1,14 @@
 import { StyleSheet, FlatList } from 'react-native'
-import orders from '../utility/data/orders.json'
 import OrderItem from '../components/OrderItem'
+import { useSelector } from 'react-redux'
+import { useGetOrdersQuery } from '../app/services/orders'
 
 
 const Orders = () => {
+
+  const localId = useSelector((state) => state.auth.localId)
+  const {data:orders} = useGetOrdersQuery(localId)
+  
   return (
     
     <FlatList
