@@ -8,8 +8,25 @@ import * as Location from "expo-location"
 const LocationSelector = ({navigation}) => {
 
   const [location,setLocation] = useState({latitude:"",longitude:""})
-  const [errorMsg, setErrorMsg] = useState(null)
+  const [errorMessage, setErrorMessage] = useState(null)
   const [address,setAddress] = useState("")
+
+  useEffect(()=>{
+
+    (async ()=>{
+        let {status} = await Location.requestForegroundPermissionsAsync()
+        if(status !== "granted"){
+            setErrorMessage("Permisos denegados")
+            return
+        }
+        let location = await Location.getCurrentPositionAsync()
+        setLocation({
+            latitude: location.coords.latitude,
+            longitude: location.coords.longitude
+        })
+    })()
+
+  },[])
 
   const onConfirmAddress = () => {
     navigation.goBack()
@@ -19,7 +36,7 @@ const LocationSelector = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Piedras 1497</Text>
-      <MapPreview latitude="-34.626213" longitude="-58.37641"/>
+      <MapPreview latitude={location.latitude} longitude={location.longitude}/>
       <AddButton title="Confirmar Localizacion"  onPress={onConfirmAddress} />
     </View>
   )
