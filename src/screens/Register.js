@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View, Pressable } from 'react-native'
-import { useState } from 'react'
-import { useDispatch } from 'react-redux'
 import InputForm from '../components/InputForm'
 import SubmitButton from '../components/SubmitButton'
+import { useState } from 'react'
 import colors from '../utility/globals/colors'
 import fonts from '../utility/globals/fonts'
 import { useRegisterMutation } from '../app/services/auth'
+import { useDispatch } from 'react-redux'
 import { setUser } from '../features/auth/authSlice'
 import { registerSchema } from '../utility/validations/authSchema'
 
@@ -27,12 +27,12 @@ const Register = ({navigation}) => {
         const onSubmit = async () => {
             try {
                 registerSchema.validateSync({email, password, confirmPassword})
-            const {data} = await  triggerRegister({email,password})
-            dispatch(setUser({email:data.email, idToken:data.idToken, localId:data.localId}))
-            } catch (error) {
-            setErrorEmail("")
-            setErrorPassword("")
-            setErrorConfirmPassword("")
+                const {data} = await  triggerRegister({email,password})
+                dispatch(setUser({email:data.email, idToken:data.idToken, localId:data.localId}))
+            }   catch (error) {
+                setErrorEmail("")
+                setErrorPassword("")
+                setErrorConfirmPassword("")
                 switch(error.path){
                     case"email":
                         setErrorEmail(error.message)
@@ -41,7 +41,7 @@ const Register = ({navigation}) => {
                         setErrorPassword(error.message)
                         break
                     case "confirmPassword":
-                        setConfirmPassword(error.message)  
+                        setErrorConfirmPassword(error.message)  
                         break
                     default:
                         break
