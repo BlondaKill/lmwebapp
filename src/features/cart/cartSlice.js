@@ -29,8 +29,8 @@ export const cartSlice = createSlice({
             state.total = state.items.reduce((acc, item)=> acc = acc + item.price, 0)
         },
         deleteCart:(state)=> {
-            state.cart.total = 0
-            state.cart.items = []
+            state.total = 0
+            state.items = []
         }
     }
 })

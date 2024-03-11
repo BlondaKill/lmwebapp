@@ -4,7 +4,7 @@ import colors from '../utility/globals/colors'
 
 
 
-const InputForm = ({label,value, onChangeText, isSecure}) => {
+const InputForm = ({label,value, onChangeText, isSecure, error}) => {
 
 
     return (
@@ -14,11 +14,9 @@ const InputForm = ({label,value, onChangeText, isSecure}) => {
                 value={value}  
                 onChangeText={onChangeText} 
                 style={styles.input}
-                secureTextEntry={isSecure}
-
-            
+                secureTextEntry={isSecure}      
             />
-        
+            {error ? <View><Text style={styles.error}>{error}</Text></View> : null}
         </View>
     )
 }

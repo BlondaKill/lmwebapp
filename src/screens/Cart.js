@@ -21,7 +21,7 @@ const Cart = () => {
             ...cart
         }
         await triggerAddOrder({localId, order})
-        dispatch(deleteCart)
+        dispatch(deleteCart())
     }
 
     

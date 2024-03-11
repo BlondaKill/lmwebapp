@@ -5,7 +5,7 @@ export const profileApi = createApi({
     baseQuery: fetchBaseQuery({baseUrl:"https://dappweb-dbd08-default-rtdb.firebaseio.com/"}),
     endpoints:(builder)=>({
         putImage: builder.mutation({
-            query:(image, localId) => ({
+            query:({image, localId}) => ({
                 url: `/profile/${localId}.json`,
                 method:"PUT",
                 body:{image}

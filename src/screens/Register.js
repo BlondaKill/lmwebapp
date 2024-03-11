@@ -17,12 +17,11 @@ const Register = ({navigation}) => {
         const dispatch = useDispatch()
         const [email,setEmail] = useState("")
         const [password,setPassword] = useState("")
-        const [confirmPassword, setConfirmPassword] = useState("")
-        const [triggerRegister] = useRegisterMutation()
+        const [confirmPassword, setConfirmPassword] = useState("")       
         const [errorEmail, setErrorEmail] = useState("")
         const [errorPassword, setErrorPassword] = useState("")
         const [errorConfirmPassword, setErrorConfirmPassword] = useState("")
-        
+        const [triggerRegister] = useRegisterMutation()
     
         const onSubmit = async () => {
             try {
