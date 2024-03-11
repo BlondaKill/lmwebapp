@@ -1,7 +1,7 @@
 import { StyleSheet, View, Button, Text } from 'react-native'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { addCartItem } from '../features/cart/cartSlice'
+
 
 
 const Counter = ({startingValue, textButton, product}) => {

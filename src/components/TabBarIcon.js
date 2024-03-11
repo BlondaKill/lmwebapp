@@ -8,7 +8,7 @@ const TabBarIcon = ({title, nameIcon, focused}) => {
     return (
         <View style={styles.container}>
         <Entypo name={nameIcon} size={25} color={focused ? "#f78d8d": colors.white}/>  
-        <Text style={[styles.text, focused && styles.textFocused]}>{title}</Text>
+        <Text style={[styles.text, !focused && styles.textFocused]}>{title}</Text>
         </View>
     )
 }

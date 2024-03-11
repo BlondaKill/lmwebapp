@@ -7,7 +7,7 @@ import { deleteCart } from '../features/cart/cartSlice'
 
 
 
-const Cart = () => {
+const Cart = ({navigation}) => {
 
     const dispatch = useDispatch()
     const cart = useSelector((state)=> state.cart)
@@ -22,6 +22,7 @@ const Cart = () => {
         }
         await triggerAddOrder({localId, order})
         dispatch(deleteCart())
+        navigation.navigate("OrdersStack")
     }
 
     

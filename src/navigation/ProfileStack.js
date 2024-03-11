@@ -9,12 +9,12 @@ const Stack = createNativeStackNavigator()
 const ProfileStack = () => {
     
     return (
-    <Stack.Navigator
-        initialRouteName='Profile'
-        screenOptions={({navigation})=>{
-            return {
-                header: () =>{
-                    return <Header title='Perfil Usuario' navigation={navigation}/>
+        <Stack.Navigator
+            initialRouteName='Profile'
+            screenOptions={({navigation})=>{
+                return {
+                    header: () =>{
+                        return <Header title='Perfil Usuario' navigation={navigation}/>
                 }
             }
         }}

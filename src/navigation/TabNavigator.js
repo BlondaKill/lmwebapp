@@ -41,11 +41,11 @@ const TabNavigator = () => {
 
 
             <Tab.Screen 
-            name='OrdersStack' 
-            component={OrdersStack}
-            options= {{
-                tabBarIcon: ({focused}) => 
-                <TabBarIcon title= "Pedido" nameIcon="list" focused={focused}/>
+                name='OrdersStack' 
+                component={OrdersStack}
+                options= {{
+                    tabBarIcon: ({focused}) => 
+                    <TabBarIcon title= "Pedido" nameIcon="list" focused={focused}/>
     }}
     />
 
