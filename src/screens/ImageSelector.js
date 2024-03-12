@@ -28,7 +28,7 @@ const ImageSelector = ({navigation}) => {
                 base64:true
             })
 
-            if(result.canceled){
+            if(!result.canceled){
                 setImage('data:image/jpeg;base64,' + result.assets[0].base64)
             }
         }
