@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const ordersApi = createApi({
     reducerPath:"ordersApi",
-    baseQuery: fetchBaseQuery({baseUrl:"https://dappweb-dbd08-default-rtdb.firebaseio.com/"}),
+    baseQuery: fetchBaseQuery({baseUrl:"https://dappweb-dbd08-default-rtdb.firebaseio.com"}),
     tagTypes:["Orders"],
     endpoints:(builder)=>({
         postOrder:builder.mutation({
