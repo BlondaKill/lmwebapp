@@ -1,17 +1,34 @@
 import { StyleSheet, Text, View, Platform, Pressable } from 'react-native'
 import colors from '../utility/globals/colors'
 import fonts from '../utility/globals/fonts'
-import {Ionicons} from "@expo/vector-icons"
+import {AntDesign} from "@expo/vector-icons"
+import { useDispatch, useSelector } from 'react-redux'
+import { deleteSession } from '../utility/db'
 
 
 const Header = ({title="Rochino", navigation}) => {
 
+    const idToken = useSelector(state => state.auth.idToken)
+    const dispatch = useDispatch()
+    const onLogout = () => {
+        dispatch(clearUser())
+        deleteSession()
+    }
+
     return  <View style={styles.container}>
                 {navigation.canGoBack() && 
                 <Pressable style={styles.goBack} onPress={()=> navigation.goBack()}>
-                    <Ionicons name='arrow-back-circle-outline' size={30} color="black"/>
+                    <AntDesign name="arrowleft" size={25} color="black"/>
                 </Pressable>}
                 <Text style={styles.text}>{title}</Text>
+                {idToken && (
+                    <Pressable style={styles.logoutIcon} onPress={onLogout}>
+                    <AntDesign name="logout" size={30} color="black"/>
+
+                    </Pressable>
+                )
+
+                }
             </View>
 
 }
@@ -35,7 +52,11 @@ const styles = StyleSheet.create({
         position: "absolute",
         left: 10,
         bottom: 25
+    },
+    logoutIcon:{
+        position:"absolute",
+        right:10,
+        bottom:15
     }
-
 
 })

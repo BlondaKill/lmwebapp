@@ -4,6 +4,7 @@ export const profileApi = createApi({
     reducerPath:"profileApi",
     baseQuery: fetchBaseQuery({baseUrl:"https://dappweb-dbd08-default-rtdb.firebaseio.com/"}),
     tagTypes:["userImage"],
+    tagTypes:["userAddress"],
     endpoints:(builder)=>({
         putImage: builder.mutation({
             query:({image, localId}) => ({
@@ -11,11 +12,13 @@ export const profileApi = createApi({
                 method:"PUT",
                 body:{image}
             }),
-            invalidatesTags:["userImage"]
+            invalidatesTags:["userImage"],
+            invalidatesTags:["userAddress"]
         }),
         getImage: builder.query({
             query:(localId) => `/profile/${localId}.json`,
-            providesTags:["userImage"]
+            providesTags:["userImage"],
+            providesTags:["userAddress"]
         }),
         putUserLocation:builder.mutation({
             query:({localId, locationFormatted}) => ({

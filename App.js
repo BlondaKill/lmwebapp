@@ -5,6 +5,9 @@ import colors from './src/utility/globals/colors'
 import MainNavigator from './src/navigation/MainNavigator'
 import { store } from './src/app/store'
 import { Provider } from 'react-redux'
+import { init } from './src/utility/db'
+
+init()
 
 const App = () => {
 

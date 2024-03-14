@@ -7,7 +7,7 @@ const ProductByCategory = ({item, navigation}) => {
     return (
         <Pressable onPress={() => navigation.navigate("ProductDetail", {productId:item.id})} style={styles.container}>
             <Image style={styles.image} source={{uri:item.image}} resizeMode='cover'/>
-            <Text style={styles.text}>{item.id} {item.title}</Text>
+            <Text style={styles.text}>{item.title}</Text>
         </Pressable>
     )
 }
