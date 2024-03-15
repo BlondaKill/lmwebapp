@@ -5,7 +5,7 @@ export const init = () => {
     const promise = new Promise((resolve, reject) =>{
         db.transaction(tx =>{
             tx.executeSql(
-            'CREATE TABLE IF NOT EXITS sessionUser (localId TEXT NOT NULL, email TEXT NOT NULL, idToken TEXT NOT NULL)', 
+            'CREATE TABLE IF NOT EXISTS sessionUser (localId TEXT NOT NULL, email TEXT NOT NULL, idToken TEXT NOT NULL)', 
             [], 
             (_, result)=>resolve(result),
             (_, result)=> reject(result)
@@ -48,7 +48,7 @@ export const fetchSession = () => {
 export const deleteSession = () => {
     const promise = new Promise((resolve, reject) =>{
         db.transaction(tx =>{
-            tx.executeSql(
+            tx.executeSql( 
             'DELETE FROM sessionUser', 
             [], 
             (_, result)=>resolve(result),

@@ -7,9 +7,10 @@ import { deleteSession } from '../utility/db'
 
 
 const Header = ({title="Rochino", navigation}) => {
-
-    const idToken = useSelector(state => state.auth.idToken)
+    
     const dispatch = useDispatch()
+    const idToken = useSelector(state => state.auth.idToken)
+    
     const onLogout = () => {
         dispatch(clearUser())
         deleteSession()
