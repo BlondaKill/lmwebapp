@@ -2,7 +2,6 @@ import { StyleSheet, View } from 'react-native'
 
 
 const ShadowPrimary = ({style, children}) => {
-    console.log(children)
   return (
     <View style={[styles.container, style]}>
       {children}
