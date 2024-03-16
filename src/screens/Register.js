@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux'
 import { setUser } from '../features/auth/authSlice'
 import { registerSchema } from '../utility/validations/authSchema'
 import { deleteSession } from '../utility/db'
+import { insertSession } from '../utility/db'
 
 
 
@@ -23,6 +24,7 @@ const Register = ({navigation}) => {
         const [errorPassword, setErrorPassword] = useState("")
         const [errorConfirmPassword, setErrorConfirmPassword] = useState("")
         const [triggerRegister] = useRegisterMutation()
+
     
         const onSubmit = async () => {
             try {
