@@ -4,6 +4,7 @@ import fonts from '../utility/globals/fonts'
 import {AntDesign} from "@expo/vector-icons"
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteSession } from '../utility/db'
+import { clearUser } from '../features/auth/authSlice'
 
 
 const Header = ({title="Rochino", navigation}) => {

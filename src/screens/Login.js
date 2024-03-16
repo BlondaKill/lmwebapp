@@ -9,6 +9,7 @@ import { useLoginMutation } from '../app/services/auth'
 import { setUser } from '../features/auth/authSlice'
 import { loginSchema } from '../utility/validations/authSchema'
 import { deleteSession } from '../utility/db'
+import { insertSession } from '../utility/db'
 
 const Login = ({navigation}) => {
 

@@ -29,7 +29,10 @@ const Register = ({navigation}) => {
         const onSubmit = async () => {
             try {
                 registerSchema.validateSync({email, password, confirmPassword})
-                const {data} = await  triggerRegister({email,password})
+                const {data, error} = await  triggerRegister({email,password})
+                if(error){
+                    console.log("modal")
+                }
                 deleteSession()
                 insertSession(data)
                 dispatch(setUser({email:data.email, idToken:data.idToken, localId:data.localId}))
