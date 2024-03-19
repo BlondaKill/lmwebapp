@@ -8,7 +8,7 @@ const Orders = () => {
 
   const localId = useSelector((state) => state.auth.localId)
   const {data:orders} = useGetOrdersQuery(localId)
-  console.log(orders)
+  
   return (
     
     <FlatList
