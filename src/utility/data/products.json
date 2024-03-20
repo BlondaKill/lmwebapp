@@ -147,6 +147,37 @@
   },
   {
     "id": 14,
+    "title": "Canelones de Verdura",
+    "description": "canelones de verdura y salsa",
+    "price": 46,
+    "stock": 113,
+    "brand": "Rochino",
+    "category": "canelones",
+    "image": "https://i.ibb.co/2NxWX2n/canecar.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Canelones de Ricota",
+    "description": "canelones de ricota y queso",
+    "price": 46,
+    "stock": 113,
+    "brand": "Rochino",
+    "category": "canelones",
+    "image": "https://i.ibb.co/kKHbRB4/cane.jpg"
+  
+  },
+  {
+    "id": 16,
+    "title": "Canelones de Carne",
+    "description": "canelones de carne fresca",
+    "price": 46,
+    "stock": 113,
+    "brand": "Rochino",
+    "category": "canelones",
+    "image": "https://ibb.co/TmhVFtd"
+  },
+  {
+    "id": 17,
     "title": "Crepitos de Carne",
     "description": "crepes de carne",
     "price": 12,
@@ -156,7 +187,7 @@
     "image": "https://i.ibb.co/vJVSyTv/crep.jpg"
   },
   {
-    "id": 15,
+    "id": 18,
     "title": "Crepitos de Verdura",
     "description": "crepes de verdura",
     "price": 40,
@@ -166,7 +197,7 @@
     "image": "https://i.ibb.co/ZcvC28Z/crepcrud.jpg"
   },
   {
-    "id": 16,
+    "id": 19,
     "title": "Crepitos de Jamon y Queso",
     "description": "crepes de jamon y queso",
     "price": 46,
@@ -176,7 +207,7 @@
     "images": "https://ibb.co/5Ld9MKS"
   },
   {
-    "id": 17,
+    "id": 20,
     "title": "Tarta Portobello",
     "description": "tarta de hongos y queso",
     "price": 70,
@@ -186,7 +217,7 @@
     "image": "https://i.ibb.co/Cnh6bWs/tartcrud.jpg"
   },
   {
-    "id": 18,
+    "id": 21,
     "title": "Tarta de Verduras",
     "description": "tarta de verdura",
     "price": 20,
@@ -197,7 +228,7 @@
     
   },
   {
-    "id": 19,
+    "id": 22,
     "title": "Tarta de Jamon y Queso",
     "description": "tarta de jamon y queso",
     "price": 14,
@@ -207,7 +238,7 @@
     "image": "https://ibb.co/TKr0pJ3" 
   },
   {
-    "id": 20,
+    "id": 23,
     "title": "Pizza Napolitana",
     "description": "pizza napolitana",
     "price": 14,
@@ -217,7 +248,7 @@
     "image": "https://i.ibb.co/bdj4cxH/pizza.jpg"
   },
   {
-    "id": 21,
+    "id": 24,
     "title": "Pizza de Pepperoni",
     "description": "pizza de pepperoni",
     "price": 46,
@@ -227,7 +258,7 @@
     "image": "https://i.ibb.co/94c9xZy/pizzacong.jpg"
   },
   {
-    "id": 22,
+    "id": 25,
     "title": "Pizza de Hongos",
     "description": "pizza de hongos",
     "price": 46,
@@ -237,7 +268,7 @@
     "image": "https://i.ibb.co/bdj4cxH/pizza.jpg"
   },
   {
-    "id": 23,
+    "id": 26,
     "title": "Pizza de Verdura",
     "description": "pizza de verdura",
     "price": 46,
@@ -247,7 +278,7 @@
     "image": "https://i.ibb.co/bdj4cxH/pizza.jpg" 
   },
   {
-    "id": 24,
+    "id": 27,
     "title": "Pizza Muzzarella",
     "description": "pizza de muzzarella",
     "price": 46,
@@ -257,7 +288,7 @@
     "image": "https://i.ibb.co/bdj4cxH/pizza.jpg"
   },
   {
-    "id": 25,
+    "id": 28,
     "title": "Empanadas de Pollo",
     "description": "empanadas de pollo",
     "price": 46,
@@ -267,7 +298,7 @@
     "image": "https://i.ibb.co/3mC3tjB/empcrud.jpg"
   },
   {
-    "id": 26,
+    "id": 29,
     "title": "Empanadas de Jamon y Queso",
     "description": "empanadas de jamon y queso",
     "price": 46,
@@ -277,7 +308,7 @@
     "image": "https://i.ibb.co/LZ4bDS1/emp.jpg"
   },
   {
-    "id": 27,
+    "id": 30,
     "title": "Empanadas de Carne",
     "description": "empanadas de carne fresca",
     "price": 46,
@@ -285,36 +316,7 @@
     "brand": "Rochino",
     "category": "empanadas",
     "image": "https://i.ibb.co/CPmW99J/emp3.jpg"
-  },
-  {
-    "id": 28,
-    "title": "Canelones de Carne",
-    "description": "canelones de carne fresca",
-    "price": 46,
-    "stock": 113,
-    "brand": "Rochino",
-    "category": "canelones",
-    "image": "https://ibb.co/TmhVFtd"
-  },
-  {
-    "id": 29,
-    "title": "Canelones de Verdura",
-    "description": "canelones de verdura y salsa",
-    "price": 46,
-    "stock": 113,
-    "brand": "Rochino",
-    "category": "canelones",
-    "image": "https://i.ibb.co/2NxWX2n/canecar.jpg"
-  },
-  {
-    "id": 30,
-    "title": "Canelones de Ricota",
-    "description": "canelones de ricota y queso",
-    "price": 46,
-    "stock": 113,
-    "brand": "Rochino",
-    "category": "canelones",
-    "image": "https://i.ibb.co/kKHbRB4/cane.jpg"
-  
   }
+  
+  
 ]
