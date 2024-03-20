@@ -11,7 +11,7 @@ const Categories = ({navigation}) => {
   return (
     <FlatList
             data={categories}
-            keyExtractor={item => item.title}
+            keyExtractor={item => item}
             renderItem={({item}) => <CardCategory item={item} navigation={navigation}/>}
         
     />
