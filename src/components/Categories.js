@@ -1,8 +1,8 @@
 import { StyleSheet, FlatList, Text, View } from 'react-native'
 import { useGetCategoriesQuery } from '../app/services/shop'
-
 import CardCategory from './CardCategory'
 import LoadingSpinner from './LoadingSpinner'
+import EmptyList from './EmptyList'
 
 
 const Categories = ({navigation}) => {
@@ -12,7 +12,7 @@ const Categories = ({navigation}) => {
 
   if(isLoading) return <LoadingSpinner/>
   if(isError) return <View><Text>Error</Text></View>
-  if(isSuccess && categories === null) return <View><Text>No hay categorias...</Text></View>
+  if(isSuccess && categories === null) return <EmptyList message= "Sin Categorias"/>
 
   return (
     <FlatList

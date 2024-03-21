@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native'
+import ButtonPrimary from './ButtonPrimary'
 
 
 const Error = ({message, textButton, onRetry}) => {
@@ -13,7 +14,7 @@ const Error = ({message, textButton, onRetry}) => {
 export default Error
 
 const styles = StyleSheet.create({
-    conatiner: {
+    container: {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
