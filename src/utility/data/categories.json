@@ -1,13 +1,40 @@
 [
-        "ravioles",
-        "sorrentinos",
-        "lasagna",
-        "fideos",
-        "canelones",
-        "crepitos",
-        "tartas",
-        "pizzas",
-        "empanadas"
+    {
+        "title":"ravioles"
+        
+      },  
+      {
+        "title":"sorrentinos"
+        
+      },
+      {
+        "title":"lasagna"
+        
+      },
+      {
+        "title":"fideos"
+        
+      },  
+      {
+        "title":"canelones"
+        
+      },
+      {
+        "title":"crepitos"
+        
+      },
+      {
+        "title":"tartas"
+        
+      },
+      {
+        "title":"pizzas"
+        
+      },
+      {
+        "title":"empanadas"
+        
+      }
         
     ]
 

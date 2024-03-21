@@ -6,9 +6,9 @@ import fonts from '../utility/globals/fonts'
 
 const CardCategory = ({item, navigation}) => {
     return (
-        <Pressable onPress={()=>navigation.navigate("ProductsByCategory",{categorySelected:item})}>
+        <Pressable onPress={()=>navigation.navigate("ProductsByCategory",{categorySelected:item.title})}>
             <ShadowPrimary style={styles.container}>
-                <Text style={styles.input}>{item}</Text>
+                <Text style={styles.input}>{item.title}</Text>
             </ShadowPrimary>
         </Pressable>
     )
