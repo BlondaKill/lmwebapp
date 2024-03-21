@@ -4,14 +4,19 @@ import Counter from '../components/Counter'
 import { useDispatch } from 'react-redux'
 import { addCartItem } from '../features/cart/cartSlice'
 import { useGetProductQuery } from '../app/services/shop'
+import LoadingSpinner from '../components/LoadingSpinner'
+import Error from '../components/Error'
 
 
-const ProductDetail = ({route}) => {
+const ProductDetail = ({route, navigation}) => {
   const dispatch = useDispatch()
   const {productId} = route.params
-  const {data:product, isLoading} = useGetProductQuery(productId)
+  const {data:product, isLoading, isError, isSuccess} = useGetProductQuery(productId)
 
-  if(isLoading) return <View><Text>cargando...</Text></View>
+  if(isLoading) return <LoadingSpinner/>
+  if(isError) return <Error message="Algo salió mal!" textButton="Volver" onRetry={()=>navigation.goBack()}/>
+  if(isSuccess && product === null) return <View><Text>No hay productos...</Text></View>
+
 
   return (
     <View style={styles.container}>

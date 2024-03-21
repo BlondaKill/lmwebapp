@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import ProductByCategory from '../components/ProductByCategory'
 import Search from '../components/Search'
 import { useGetProductsByCategoryQuery } from '../app/services/shop'
+import LoadingSpinner from '../components/LoadingSpinner'
+import Error from '../components/Error'
 
 
 const ProductsByCategory = ({navigation, route}) => {
@@ -11,6 +13,10 @@ const ProductsByCategory = ({navigation, route}) => {
   const {data: products, isError, isLoading, isSuccess, error} = useGetProductsByCategoryQuery(categorySelected)
   const [productsFiltered, setProductsFiltered] = useState([])
   const [keyword, setKeyword] = useState("")
+
+  if(isLoading) return <LoadingSpinner/>
+  if(isError) return <Error message="Algo salió mal!" textButton="Volver" onRetry={()=>navigation.goBack()}/>
+  if(isSuccess && products.length === 0) return <View><Text>No hay productos...</Text></View>
 
 
   const handlerKeyWord = (k) => {
