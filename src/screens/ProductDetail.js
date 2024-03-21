@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
 import colors from '../utility/globals/colors'
-import Counter from '../components/Counter'
 import { useDispatch } from 'react-redux'
 import { addCartItem } from '../features/cart/cartSlice'
 import { useGetProductQuery } from '../app/services/shop'
 import LoadingSpinner from '../components/LoadingSpinner'
 import Error from '../components/Error'
+import EmptyList from '../components/EmptyList'
 
 
 const ProductDetail = ({route, navigation}) => {
@@ -15,7 +15,7 @@ const ProductDetail = ({route, navigation}) => {
 
   if(isLoading) return <LoadingSpinner/>
   if(isError) return <Error message="Algo salió mal!" textButton="Volver" onRetry={()=>navigation.goBack()}/>
-  if(isSuccess && product === null) return <View><Text>No hay productos...</Text></View>
+  if(isSuccess && product === null) return <EmptyList message= "Producto no disponible"/>
 
 
   return (

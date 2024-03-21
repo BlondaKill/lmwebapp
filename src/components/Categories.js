@@ -9,9 +9,15 @@ const Categories = ({navigation}) => {
 
   const {data: categories, isError, isLoading, isSuccess} = useGetCategoriesQuery()
 
+  const onRetry = () => {
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'Home' }],
+    })
+  }
 
   if(isLoading) return <LoadingSpinner/>
-  if(isError) return <View><Text>Error</Text></View>
+  if(isError) return <Error message="Algo salió mal!" textButton="Recargar" onRetry={()=>navigation.goBack()}/>
   if(isSuccess && categories === null) return <EmptyList message= "Sin Categorias"/>
 
   return (

@@ -10,6 +10,7 @@ import { setUser } from '../features/auth/authSlice'
 import { loginSchema } from '../utility/validations/authSchema'
 import { deleteSession } from '../utility/db'
 import { insertSession } from '../utility/db'
+import ModalMessage from '../components/ModalMessage'
 
 const Login = ({navigation}) => {
 
@@ -19,13 +20,21 @@ const Login = ({navigation}) => {
         const [errorEmail,setErrorEmail] = useState("")
         const [errorPassword,setErrorPassword] = useState("")
         const [triggerLogin] = useLoginMutation()
+        const [modalVisible, setModalVisible] = useState(false)
 
         
-    
+        const handlerCloseModal = () => {
+            setModalVisible(false)
+        }
         const onSubmit = async () => {
           try {
             loginSchema.validateSync({email,password})
-            const {data} = await  triggerLogin({email,password})
+            const {data, error} = await  triggerLogin({email,password})
+            
+
+            if(error){
+              setModalVisible(true)
+            }         
             deleteSession()
             insertSession(data)
             dispatch(setUser({email:data.email,idToken:data.idToken,localId:data.localId}))
@@ -53,6 +62,7 @@ const Login = ({navigation}) => {
 
 
    return (
+    <>
     <View style={styles.main}>
             <View style={styles.container}>
                 <InputForm
@@ -76,6 +86,15 @@ const Login = ({navigation}) => {
                 </Pressable>
             </View>
         </View>
+        <ModalMessage textButton="Intenta nuevamente"
+            text="Email o Password no valida"
+            modalVisible={modalVisible}
+            onclose={handlerCloseModal}
+        
+        
+        />
+
+        </>
   )
 }
 
