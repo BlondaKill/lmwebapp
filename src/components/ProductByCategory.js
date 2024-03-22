@@ -12,9 +12,6 @@ const ProductByCategory = ({item, navigation}) => {
     )
 }
 
-// {uri:item.thumbnail}
-// require("../../assets/crep.jpeg")
-
 export default ProductByCategory
 
 const styles = StyleSheet.create({

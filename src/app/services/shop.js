@@ -5,7 +5,7 @@ export const shopApi = createApi({
     baseQuery: fetchBaseQuery({baseUrl:"https://dappweb-dbd08-default-rtdb.firebaseio.com/"}),
     endpoints:(builder)=>({
         getProductsByCategory: builder.query({
-            query:(category) => `/products.json?orderBy= "category"&equalTo = "${category}"`,
+            query:(category) => `/products.json?orderBy="category"&equalTo="${category}"`,
             transformResponse:(response)=>{
                 const data = Object.values(response)
                 return data 
