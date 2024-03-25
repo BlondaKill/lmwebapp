@@ -13,6 +13,8 @@ const ProductDetail = ({route, navigation}) => {
   const {productId} = route.params
   const {data:product, isLoading, isError, isSuccess} = useGetProductQuery(productId)
 
+
+
   if(isLoading) return <LoadingSpinner/>
   if(isError) return <Error message="Algo salió mal!" textButton="Volver" onRetry={()=>navigation.goBack()}/>
   if(isSuccess && product === null) return <EmptyList message= "Producto no disponible"/>
