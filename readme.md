@@ -7,7 +7,6 @@ Rochino es una aplicacion mobile para la comercializacion de pastas y pizzas con
 - **Acceso Seguro:  Solo los usuarios autenticados pueden acceder a la pantalla del perfil y realizar compras.**
 - **Info del usuario:** Muestra detalles del usuario,  nombre completo y direccion.
 
-- 
 
 ![1711459918947](image/readme/1711459918947.png)
 
